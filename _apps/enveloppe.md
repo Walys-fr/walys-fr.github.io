@@ -53,12 +53,12 @@ infos:
   - libelle: Prix
     valeur: Achat unique
   - libelle: Langues
-    valeur: 7 langues
+    valeur: 7 langues - pensé pour l'Europe
   - libelle: Connexion
     valeur: Aucune requise
 vie_privee:
   titre: Votre argent ne regarde que vous.
-  texte: Envelopp€ fonctionne sans internet, sans compte et sans aucune
+  texte: €nveloppe fonctionne sans internet, sans compte et sans aucune
     autorisation particulière. Vos montants restent sur votre iPhone.
 support:
   appareil: ex. iPhone 15
