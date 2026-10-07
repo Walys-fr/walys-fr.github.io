@@ -1,9 +1,7 @@
 ---
 layout: legal
-titre: Mentions légales
-mise_a_jour: ""
-resume: ""
 afficher_apps: false
+titre: Mentions légales
 ---
 ## Éditeur du site
 
