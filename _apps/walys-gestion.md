@@ -8,7 +8,8 @@ accroche: Votre bureau RH et administratif, en une seule app Mac.
 slogan: "Clients, devis, dossiers salariés et documents types : votre bureau RH
   et administratif, réuni dans une seule app Mac."
 resume: Clients, devis, dossiers salariés et documents types réunis au même
-  endroit. Conçu pour les indépendants et les TPE, entièrement personnalisable.
+  endroit. Conçu pour les indépendants, TPE et les PME, entièrement
+  personnalisable.
 plateformes: Mac
 prix: À venir
 points:
@@ -17,14 +18,14 @@ points:
   - Dossiers salariés
   - Paie et éléments variables
   - Modèles de documents modifiables
-  - Préparation des formations
-description: "Walys Gestion : clients, devis, dossiers salariés et documents
-  types réunis dans une app Mac. Données locales, sans cloud tiers."
+  - Préparation des accompagnements
+description: "Walys RH : clients, devis, dossiers salariés et documents types
+  réunis dans une app Mac. Données locales, sans cloud tiers."
 presentation:
   titre: Tous vos dossiers, un seul endroit.
-  texte: Née de mon propre quotidien de consultant RH, Walys Gestion remplace la
-    pile de fichiers Excel, Pages et PDF par un outil unique, pensé pour les
-    indépendants et les TPE.
+  texte: Née de mon propre quotidien de consultant freelance, Walys RH remplace la
+    pile de fichiers Excel, Word et PDF par un outil unique, pensé pour les
+    indépendants, TPE et les PME.
 fonctions:
   - icone: equipe
     titre: Fiches clients
