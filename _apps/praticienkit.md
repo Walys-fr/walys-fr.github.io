@@ -81,7 +81,12 @@ faq:
       Vous l'envoyez ensuite par le moyen de votre choix (e-mail, AirDrop…).
   - question: Je pratique plusieurs méthodes, est-ce possible ?
     reponse: Oui. Un même praticien peut activer plusieurs métiers (sophrologie,
-      Reiki) avec leurs outils dédiés.
+      Reiki et plus à venir) avec leurs outils dédiés.
+  - question: Pourquoi mon activité n'est pas répertoriée ?
+    reponse: Le principe de l'application vous intéresse, je vous laisse me
+      contacter afin que nous puissions développer votre activité. Toutes
+      contributions sont bonnes à recevoir pour permettre de développer au
+      maximum le potentiel.
   - question: Quand l'app sera-t-elle disponible ?
     reponse: PraticienKit est en cours de développement. Écrivez-moi pour être
       prévenu·e du lancement.
