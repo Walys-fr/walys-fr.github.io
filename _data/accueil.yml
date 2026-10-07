@@ -52,8 +52,8 @@ vie_privee:
         vous faites dans l'app ne regarde que vous.
     - icone: telecharger
       titre: Vos données vous appartiennent
-      texte: Export et sauvegarde à tout moment, dans des formats ouverts. Vous partez
-        quand vous voulez, avec tout.
+      texte: Exportation et sauvegarde chiffrées à tout moment, dans des formats
+        ouverts. Vous partez quand vous voulez, avec tout.
   note_site: "Ce site aussi : aucun cookie, aucune statistique de visite, aucune
     police ni script externe."
 methode:
