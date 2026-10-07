@@ -72,7 +72,7 @@ faq:
     reponse: "Vous, en tant que praticien. PraticienKit vous facilite cette
       responsabilité : aucune donnée n'est transmise à Walys ou à un tiers.
       Protégez votre appareil par un code ou un mot de passe et faites des
-      sauvegardes régulières."
+      sauvegardes chiffrées régulières."
   - question: Le dictaphone ne fonctionne pas
     reponse: "Vérifiez que l'accès au micro est autorisé : Réglages système ›
       Confidentialité et sécurité › Micro, puis activez PraticienKit."
