@@ -1,0 +1,194 @@
+---
+layout: base
+titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
+---
+{%- comment -%}
+  Page d'accueil. Les textes se modifient dans Pages CMS › « Page d'accueil »
+  (fichier _data/accueil.yml). Ne modifiez pas ce fichier.
+{%- endcomment -%}
+{%- assign d = site.data.accueil -%}
+{%- assign r = site.data.reglages -%}
+{%- assign ic = site.data.icones -%}
+{%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
+{%- assign logo = r.logo | default: "/assets/logos/WalysLogo.png" | relative_url -%}
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-logo logo-chip"><img src="{{ logo }}" alt="Logo Walys" onerror="this.parentElement.style.display='none'"></div>
+    <div class="pills">
+      {%- for b in d.entete.badges %}
+      <span class="pill"><span class="dot"></span>{{ b | escape }}</span>
+      {%- endfor %}
+    </div>
+    <h1>{{ d.entete.titre | escape }}<br><span class="soft">{{ d.entete.titre_couleur | escape }}</span> {{ d.entete.titre_fin | escape }}</h1>
+    <p class="hero-subtitle">{{ d.entete.sous_titre | escape }}</p>
+    <div class="buttons">
+      <a href="{{ '/apps/' | relative_url }}" class="button">{{ d.entete.bouton_principal | escape }}</a>
+      <a href="#services" class="button secondary">{{ d.entete.bouton_secondaire | escape }}</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><i></i>Défiler</div>
+  </div>
+</section>
+
+<div class="promise reveal">
+  <div class="promise-grid">
+    {%- for c in d.chiffres %}
+    <div class="promise-item"><strong>{% if c.chiffre != "" %}<em>{{ c.chiffre | escape }}</em> {% endif %}{{ c.mot | escape }}</strong><span>{{ c.texte | escape }}</span></div>
+    {%- endfor %}
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section">
+  <div class="section-header reveal">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">{{ d.services.titre | escape }}</h2>
+    <p class="section-description">{{ d.services.texte | escape }}</p>
+  </div>
+  <div class="cards three">
+    {%- assign services_tries = site.services | sort: "ordre" %}
+    {%- for s in services_tries %}
+    <a class="card reveal" href="{{ s.url | relative_url }}">
+      <div class="icon-box{% if forloop.index == 3 %} accent{% endif %}">{{ svg }}{{ ic[s.icone] }}</svg></div>
+      <h3>{{ s.titre | escape }}</h3>
+      <p>{{ s.resume | escape }}</p>
+      <span class="card-link">En savoir plus <span>→</span></span>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ================= APPS ================= -->
+<section id="apps" class="band">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-label">Apps</div>
+      <h2 class="section-title">{{ d.apps.titre | escape }}</h2>
+      <p class="section-description">{{ d.apps.texte | escape }}</p>
+    </div>
+    <div class="app-list">
+      {%- assign apps_tries = site.apps | sort: "ordre" %}
+      {%- for a in apps_tries %}
+      <article class="card app-card reveal">
+        <div class="app-icon tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}" loading="lazy">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>
+        <div>
+          <div class="app-head"><h3>{{ a.nom | escape }}</h3>{% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}</div>
+          <p class="app-tagline">{{ a.accroche | escape }}</p>
+          <p>{{ a.resume | escape }}</p>
+          <ul class="checklist app-features">
+            {%- for p in a.points %}<li>{{ p | escape }}</li>{% endfor %}
+          </ul>
+          <div class="meta-row">
+            {% if a.plateformes != "" %}<span class="meta">{{ a.plateformes | escape }}</span>{% endif %}
+            {% if a.prix != "" %}<span class="meta">{{ a.prix | escape }}</span>{% endif %}
+            <span class="meta">Aucune donnée collectée</span>
+          </div>
+          <div class="link-row">
+            <a href="{{ a.url | relative_url }}" class="card-link">Découvrir {{ a.nom | escape }} <span>→</span></a>
+            <a href="{{ a.url | relative_url }}#support" class="card-link">Support <span>→</span></a>
+          </div>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    <div class="buttons"><a href="{{ '/apps/' | relative_url }}" class="button secondary">Voir toutes les apps</a></div>
+  </div>
+</section>
+
+<!-- ================= VIE PRIVÉE ================= -->
+<section id="confidentialite" class="section">
+  <div class="privacy-hero reveal">
+    <div class="section-label">Vie privée</div>
+    <h2>{{ d.vie_privee.titre | escape }}</h2>
+    <p class="lead">{{ d.vie_privee.texte | escape }}</p>
+    <div class="principles">
+      {%- for p in d.vie_privee.principes %}
+      <div class="principle">{{ svg }}{{ ic[p.icone] }}</svg><h4>{{ p.titre | escape }}</h4><p>{{ p.texte | escape }}</p></div>
+      {%- endfor %}
+    </div>
+    <div class="privacy-foot">
+      <p>{{ d.vie_privee.note_site | escape }}</p>
+      <a href="{{ '/confidentialite.html' | relative_url }}" class="button">Politique de confidentialité</a>
+    </div>
+  </div>
+  <div class="section-header center reveal" style="margin-top:90px;margin-bottom:10px">
+    <h3 class="section-title small">Où vont vos données ?</h3>
+  </div>
+  <div class="flow reveal">
+    <div class="flow-node">{{ svg }}{{ ic.telephone }}</svg><b>Votre appareil</b><small>Les données y sont créées et stockées</small></div>
+    <div class="flow-arrow" aria-hidden="true">⇄</div>
+    <div class="flow-node">{{ svg }}{{ ic.nuage }}</svg><b>Votre iCloud</b><small>Optionnel, pour vos sauvegardes et appareils</small></div>
+    <div class="flow-arrow no" aria-hidden="true">✕</div>
+    <div class="flow-node off">{{ svg }}{{ ic.serveur }}</svg><b>Serveurs Walys</b><small>Il n'y en a pas. Rien n'y arrive.</small></div>
+  </div>
+</section>
+
+<!-- ================= MÉTHODE ================= -->
+<section id="methode" class="section">
+  <div class="section-header reveal">
+    <div class="section-label">Méthode</div>
+    <h2 class="section-title">{{ d.methode.titre | escape }}</h2>
+    <p class="section-description">{{ d.methode.texte | escape }}</p>
+  </div>
+  <div class="steps">
+    {%- for e in d.methode.etapes %}
+    <div class="step reveal"><h4>{{ e.titre | escape }}</h4><p>{{ e.texte | escape }}</p></div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section id="apropos" class="section">
+  <div class="section-header reveal">
+    <div class="section-label">À propos</div>
+    <h2 class="section-title">Derrière Walys.</h2>
+  </div>
+  <div class="about-box">
+    <article class="card static about-main reveal">
+      <h3>{{ d.a_propos.nom | escape }}</h3>
+      <p class="lead">{{ d.a_propos.introduction | escape }}</p>
+      <p>{{ d.a_propos.texte | escape }}</p>
+      <ul class="timeline">
+        {%- for p in d.a_propos.parcours %}
+        <li><span class="ti">{{ svg }}{{ ic[p.icone] }}</svg></span><span><b>{{ p.titre | escape }}</b>{{ p.texte | escape }}</span></li>
+        {%- endfor %}
+      </ul>
+    </article>
+    <article class="card static about-side reveal">
+      <div>
+        <p class="quote">{{ d.a_propos.citation | escape }}</p>
+        <p>{{ d.a_propos.citation_suite | escape }}</p>
+      </div>
+      <span class="location">{{ svg }}{{ ic.lieu }}</svg> {{ d.a_propos.localisation | escape }}</span>
+    </article>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section">
+  <div class="section-header center reveal">
+    <div class="section-label">Questions fréquentes</div>
+    <h2 class="section-title">Bon à savoir.</h2>
+  </div>
+  <div class="faq reveal">
+    {%- for q in d.faq %}
+    <details><summary>{{ q.question | escape }}</summary><div class="answer">{{ q.reponse | markdownify }}</div></details>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
+  <div class="contact-box reveal">
+    <div>
+      <h2>{{ d.contact.titre | escape }}</h2>
+      <p>{{ d.contact.texte | escape }}</p>
+      <a class="button" href="mailto:{{ r.email }}">{{ svg }}{{ ic.mail }}</svg><span>{{ r.email }}</span></a>
+    </div>
+    <div class="contact-topics">
+      {%- for t in d.contact.sujets %}
+      <a class="contact-topic" href="mailto:{{ r.email }}?subject={{ t.titre | uri_escape }}">{{ svg }}{{ ic[t.icone] }}</svg><span>{{ t.titre | escape }}<small>{{ t.sous_titre | escape }}</small></span></a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

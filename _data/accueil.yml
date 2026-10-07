@@ -1,0 +1,99 @@
+entete:
+  badges:
+    - Admin
+    - RH
+    - Numérique
+    - Apps Apple
+  titre: La technologie,
+  titre_couleur: sans renoncer
+  titre_fin: à votre vie privée.
+  sous_titre: Walys accompagne les indépendants et les petites entreprises dans leur gestion administrative et RH, et crée des applications Apple simples, utiles — où vos données restent chez vous.
+  bouton_principal: Découvrir les apps
+  bouton_secondaire: Voir les services
+chiffres:
+  - chiffre: "0"
+    mot: pub
+    texte: Jamais, dans aucune app
+  - chiffre: "0"
+    mot: traceur
+    texte: Aucune statistique, aucun profilage
+  - chiffre: ""
+    mot: 100 %
+    texte: Données stockées sur vos appareils
+  - chiffre: ""
+    mot: Apple
+    texte: iPhone · iPad · Mac
+services:
+  titre: L'humain au centre. L'outil au service.
+  texte: Sept ans d'expérience en paie, gestion RH et formation dans le privé, mis au service des indépendants et des TPE — avec une approche claire, structurée et pragmatique.
+apps:
+  titre: Des applications utiles. Et rien d'autre.
+  texte: Pas de compte à créer, pas de publicité, pas de collecte. Chaque app fait une chose, la fait bien, et s'intègre naturellement à vos appareils Apple.
+vie_privee:
+  titre: Vos données restent chez vous. Point.
+  texte: Reprendre le contrôle sur sa vie privée ne devrait pas obliger à renoncer à la technologie. Toutes les apps Walys reposent sur quatre principes, sans exception.
+  principes:
+    - icone: telephone
+      titre: Stockage local
+      texte: Vos informations sont enregistrées sur votre appareil, pas sur un serveur Walys. Je n'en ai d'ailleurs aucun.
+    - icone: nuage
+      titre: Votre iCloud, pas le mien
+      texte: Quand une app propose la synchronisation, elle passe par votre propre compte iCloud. Walys n'y a jamais accès.
+    - icone: interdit
+      titre: Zéro pub, zéro traceur
+      texte: Aucune publicité, aucun outil de statistiques, aucun SDK tiers. Ce que vous faites dans l'app ne regarde que vous.
+    - icone: telecharger
+      titre: Vos données vous appartiennent
+      texte: Export et sauvegarde à tout moment, dans des formats ouverts. Vous partez quand vous voulez, avec tout.
+  note_site: "Ce site aussi : aucun cookie, aucune statistique de visite, aucune police ni script externe."
+methode:
+  titre: De l'idée à l'outil.
+  texte: "Que ce soit une mission RH ou une application, la démarche est la même : comprendre avant de construire, et rester simple."
+  etapes:
+    - titre: Écouter
+      texte: "On part de votre quotidien réel : vos tâches, vos irritants, vos fichiers actuels."
+    - titre: Structurer
+      texte: On clarifie les besoins, les priorités et ce qui doit rester volontairement simple.
+    - titre: Construire
+      texte: Mise en place de la solution, par étapes courtes, avec vos retours à chaque version.
+    - titre: Accompagner
+      texte: "Prise en main, formation et ajustements : l'outil doit vous servir dans la durée."
+a_propos:
+  nom: Wylfried Salcedo
+  introduction: "Walys rassemble ce que je sais faire et ce en quoi je crois : un accompagnement administratif et RH humain, et des outils numériques qui respectent ceux qui les utilisent."
+  texte: "Après plusieurs années côté paie, RH et formation, j'ai fait un constat simple : les petites structures manquent d'outils adaptés, et les outils existants se paient trop souvent avec leurs données. Walys est ma réponse."
+  parcours:
+    - icone: personnes
+      titre: 7 ans en paie, RH & formation
+      texte: Administration du personnel, paie, tutorat en entreprise privée.
+    - icone: camion
+      titre: BTS Transport et Logistique
+      texte: Le goût de l'organisation et des processus bien huilés.
+    - icone: ecran
+      titre: Développeur d'apps Apple
+      texte: Des applications iPhone, iPad et Mac, conçues sous la marque Walys.
+  citation: "Moins de complexité. Plus de clarté. Et des données qui restent là où elles doivent être : chez vous."
+  citation_suite: Des outils conçus pour répondre à de vrais besoins, et s'intégrer naturellement dans le quotidien.
+  localisation: La Réunion · Interventions à distance
+faq:
+  - question: Mes données sont-elles envoyées quelque part ?
+    reponse: Non. Les apps Walys enregistrent vos informations uniquement sur votre appareil. Walys ne possède aucun serveur et ne reçoit jamais vos données.
+  - question: Pourquoi les apps sont-elles payantes ?
+    reponse: Parce que c'est la seule façon honnête de financer une app sans pub ni revente de données. Selon l'app, c'est un achat unique ou un abonnement, toujours affiché clairement sur l'App Store.
+  - question: Où trouver de l'aide sur une app ?
+    reponse: Chaque app a sa propre page, avec un onglet Support (questions fréquentes et contact direct). Retrouvez-les depuis la page des apps.
+  - question: Pouvez-vous créer une app pour mon activité ?
+    reponse: "Oui. Décrivez-moi votre besoin par e-mail : on regarde ensemble ce qui est faisable, dans quel délai et pour quel budget, sans engagement."
+contact:
+  titre: Un projet ? Parlons-en.
+  texte: Une question RH, un besoin administratif, une idée d'application ou une question sur une app Walys ? Écrivez-moi simplement, je réponds personnellement.
+  sujets:
+    - icone: personnes
+      titre: Accompagnement admin / RH
+      sous_titre: Mission ponctuelle ou régulière
+    - icone: ecran
+      titre: Projet d'application
+      sous_titre: Outil sur mesure pour votre activité
+    - icone: aide
+      titre: Support d'une app
+      sous_titre: Une question, un souci, une suggestion

@@ -1,0 +1,37 @@
+# Configuration du site Walys (construit automatiquement par GitHub Pages).
+# Vous n'avez normalement pas besoin de modifier ce fichier.
+
+title: Walys
+lang: fr
+
+collections:
+  services:
+    output: true
+    permalink: /services/:name.html
+  apps:
+    output: true
+    permalink: /apps/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+  - scope:
+      path: ""
+      type: apps
+    values:
+      layout: app
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - pages.yml
+  - Gemfile
+  - Gemfile.lock
+  - vendor

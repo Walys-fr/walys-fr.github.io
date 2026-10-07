@@ -1,0 +1,91 @@
+---
+layout: base
+---
+{%- comment -%} Gabarit d'une page de service. Les textes se modifient dans Pages CMS › « Services ». {%- endcomment -%}
+{%- assign r = site.data.reglages -%}
+{%- assign ic = site.data.icones -%}
+{%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
+{%- assign sujet = page.sujet_email | default: page.titre -%}
+
+<section class="page-hero">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><a href="{{ '/#services' | relative_url }}">Services</a><span class="sep">/</span><span>{{ page.titre | escape }}</span></nav>
+  <div class="icon-box">{{ svg }}{{ ic[page.icone] }}</svg></div>
+  <h1>{{ page.titre_page | escape }}<br><span class="soft">{{ page.titre_page_couleur | escape }}</span></h1>
+  <p class="lead">{{ page.introduction | escape }}</p>
+  <div class="buttons left">
+    <a class="button" href="mailto:{{ r.email }}?subject={{ sujet | uri_escape }}">Demander un échange</a>
+    <a class="button secondary" href="#offre">Ce que je propose</a>
+  </div>
+</section>
+
+<section id="offre" class="section">
+  <div class="section-header reveal"><div class="section-label">Ce que je propose</div><h2 class="section-title small">Un appui concret, à la carte.</h2></div>
+  <div class="cards three">
+    {%- for o in page.offres %}
+    <article class="card static reveal">
+      <div class="icon-box{% if forloop.index == 3 %} accent{% endif %}">{{ svg }}{{ ic[o.icone] }}</svg></div>
+      <h3>{{ o.titre | escape }}</h3>
+      <ul class="checklist">{% for p in o.points %}<li>{{ p | escape }}</li>{% endfor %}</ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="cards">
+    <article class="card static reveal">
+      <h3>Pour qui ?</h3>
+      <ul class="checklist">{% for p in page.pour_qui %}<li>{{ p | escape }}</li>{% endfor %}</ul>
+    </article>
+    <article class="card static reveal">
+      <h3>Mes engagements</h3>
+      <ul class="checklist">{% for p in r.engagements %}<li>{{ p | escape }}</li>{% endfor %}</ul>
+    </article>
+  </div>
+</section>
+
+{%- if page.etapes and page.etapes.size > 0 %}
+<section class="section">
+  <div class="section-header reveal"><div class="section-label">Déroulé</div><h2 class="section-title small">Comment ça se passe.</h2></div>
+  <div class="steps three">
+    {%- for e in page.etapes %}
+    <div class="step reveal"><h4>{{ e.titre | escape }}</h4><p>{{ e.texte | escape }}</p></div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if page.afficher_apps %}
+<section class="band">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-label">Réalisations</div>
+      <h2 class="section-title small">Les apps Walys.</h2>
+      <p class="section-description">Mes propres applications, conçues avec les mêmes exigences que celles que je propose à mes clients.</p>
+    </div>
+    <div class="app-tiles">
+      {%- assign apps_tries = site.apps | sort: "ordre" %}
+      {%- for a in apps_tries %}
+      <a class="card app-tile reveal" href="{{ a.url | relative_url }}">
+        <div class="app-icon sm tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}" loading="lazy">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>
+        {% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}
+        <h3>{{ a.nom | escape }}</h3>
+        <p>{{ a.accroche | escape }}</p>
+        <div class="platforms">{{ a.plateformes | escape }}</div>
+        <span class="card-link">Voir la fiche <span>→</span></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section id="contact" class="section contact-section">
+  <div class="contact-box single reveal">
+    <div>
+      <h2>Parlons de votre besoin.</h2>
+      <p>Décrivez-moi votre situation en quelques lignes : je vous réponds personnellement avec une proposition adaptée, sans engagement.</p>
+      <a class="button" href="mailto:{{ r.email }}?subject={{ sujet | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire un e-mail</span></a>
+    </div>
+  </div>
+</section>

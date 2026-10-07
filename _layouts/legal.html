@@ -1,0 +1,28 @@
+---
+layout: base
+---
+{%- comment -%} Gabarit des pages légales. Les textes se modifient dans Pages CMS › « Pages légales ». {%- endcomment -%}
+{%- assign r = site.data.reglages -%}
+<section class="page-hero">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><span>{{ page.titre | escape }}</span></nav>
+  <h1>{{ page.titre | escape }}</h1>
+  {%- if page.mise_a_jour and page.mise_a_jour != "" %}<p class="lead">Dernière mise à jour : {{ page.mise_a_jour | escape }}</p>{% endif %}
+</section>
+<article class="legal">
+  {%- if page.resume and page.resume != "" %}
+  <div class="summary"><b>En résumé :</b> {{ page.resume | escape }}</div>
+  {%- endif %}
+  {{ content }}
+  {%- if page.afficher_apps %}
+  <h2>Politique propre à chaque app</h2>
+  <p>Chaque application dispose de sa propre politique, détaillant ses autorisations et son fonctionnement :</p>
+  <ul>
+    {%- assign apps_tries = site.apps | sort: "ordre" %}
+    {%- for a in apps_tries %}
+    <li><a href="{{ a.url | relative_url }}#confidentialite">{{ a.nom | escape }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  <h2>Contact</h2>
+  <p><a href="mailto:{{ r.email }}">{{ r.email }}</a></p>
+</article>
