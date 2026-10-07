@@ -58,8 +58,8 @@ infos:
     valeur: 100 % locales
 vie_privee:
   titre: Le secret professionnel, par conception.
-  texte: "Les données de vos patients sont des données de santé. Elles restent sur
-    vos appareils : ni Walys ni personne d'autre n'y a accès."
+  texte: "Les données de vos patients sont des données confidentielle. Elles
+    restent sur vos appareils : ni Walys ni personne d'autre n'y a accès."
 support:
   appareil: ex. MacBook Air M2
   systeme: Menu Pomme › À propos de ce Mac
