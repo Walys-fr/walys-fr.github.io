@@ -2,7 +2,7 @@
 nom: PraticienKit
 ordre: 2
 statut: dev
-icone: /assets/images/apps/Logo Praticien.png
+icone: /assets/images/apps/PraticienKit-Clair.png
 teinte: violet
 accroche: L'outil des praticiens du bien-être.
 slogan: "Fiches patients, agenda, séances et exercices : tout votre cabinet dans
