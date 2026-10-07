@@ -84,9 +84,7 @@ faq:
       Reiki et plus à venir) avec leurs outils dédiés.
   - question: Pourquoi mon activité n'est pas répertoriée ?
     reponse: Le principe de l'application vous intéresse, je vous laisse me
-      contacter afin que nous puissions développer votre activité. Toutes
-      contributions sont bonnes à recevoir pour permettre de développer au
-      maximum le potentiel.
+      contacter afin que nous puissions développer votre activité.
   - question: Quand l'app sera-t-elle disponible ?
     reponse: PraticienKit est en cours de développement. Écrivez-moi pour être
       prévenu·e du lancement.
