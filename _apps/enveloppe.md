@@ -2,7 +2,7 @@
 nom: €nveloppe
 ordre: 1
 statut: bientot
-icone: /assets/images/apps/Enveloppe Jour.jpg
+icone: /assets/images/apps/Enveloppe-Clair.png
 teinte: orange
 accroche: Gérez votre argent liquide, billet par billet.
 slogan: Gérez votre argent liquide, billet par billet. Simple, rapide et
