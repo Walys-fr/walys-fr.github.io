@@ -28,7 +28,7 @@ offres:
       - Documents types et procédures
       - Organisation des processus RH
 pour_qui:
-  - TPE qui recrutent leurs premiers salariés
+  - TPE et PME qui recrutent leurs premiers salariés
   - Dirigeants sans service RH
   - Structures qui externalisent une partie des RH
   - Cabinets ayant besoin d'un renfort ponctuel
