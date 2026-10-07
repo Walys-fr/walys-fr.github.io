@@ -50,15 +50,15 @@ infos:
   - libelle: Plateforme
     valeur: Mac
   - libelle: Pour
-    valeur: Indépendants · TPE
+    valeur: Indépendants · TPE - PME
   - libelle: Prix
     valeur: Annoncé au lancement
   - libelle: Données
     valeur: 100 % locales
 vie_privee:
   titre: Les données de vos clients restent les vôtres.
-  texte: "Dossiers salariés, devis, informations clients : tout reste sur votre
-    Mac. Aucun cloud tiers, aucun accès de Walys."
+  texte: "Dossiers salariés, devis, informations clients, PJ : tout reste sur
+    votre Mac. Aucun cloud tiers, aucun accès de Walys."
 support:
   appareil: ex. iMac 24 pouces
   systeme: Menu Pomme › À propos de ce Mac
@@ -70,11 +70,11 @@ faq:
     reponse: Uniquement sur votre Mac. Pensez à faire des sauvegardes régulières
       (Time Machine ou sauvegarde de l'app).
   - question: Qui est responsable des données de mes clients et salariés ?
-    reponse: Vous, en tant qu'utilisateur professionnel. Walys Gestion vous facilite
+    reponse: Vous, en tant qu'utilisateur professionnel. Walys RH vous facilite
       cette responsabilité en ne transmettant aucune donnée à Walys ni à un
       tiers.
   - question: Quand l'app sera-t-elle disponible ?
-    reponse: Walys Gestion est en cours de développement. Écrivez-moi pour suivre le
+    reponse: Walys RH est en cours de développement. Écrivez-moi pour suivre le
       projet ou devenir testeur.
 confidentialite:
   mise_a_jour: 7 octobre 2026
