@@ -90,6 +90,6 @@ confidentialite:
       usage: Uniquement à votre demande
   section_titre: Données de vos clients et salariés
   section_texte: L'utilisateur professionnel est responsable du traitement des
-    données de ses clients et salariés au sens du RGPD. Walys Gestion ne
-    transmet aucune de ces données à Walys ni à un tiers.
+    données de ses clients et salariés au sens du RGPD. Walys RH ne transmet
+    aucune de ces données à Walys ni à un tiers.
 ---
