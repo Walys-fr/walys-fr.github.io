@@ -13,6 +13,8 @@ SIRET : 97987337900023
 
 Adresse : 4 Allée des bananiers, 97410, Saint-Pierre, La Réunion, France
 
+Téléphone : +262 693 437 488
+
 TVA non applicable, article 293 B du CGI.
 
 ## Directeur de la publication
