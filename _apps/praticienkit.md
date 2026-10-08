@@ -11,7 +11,6 @@ resume: "Pensé pour les sophrologues et les praticiens Reiki et bien plus à
   venir : fiches patients, agenda, mode séance guidé et bibliothèque
   d'exercices. Des données de santé qui ne quittent jamais votre appareil."
 plateformes: Mac · iPhone et iPad à venir
-prix: À venir
 points:
   - Fiches et historique patients
   - Agenda des rendez-vous
