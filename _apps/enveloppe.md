@@ -1,5 +1,5 @@
 ---
-nom: €nveloppe
+nom: Enveloppe
 ordre: 1
 statut: bientot
 icone: /assets/images/apps/Enveloppe-bicolore-couleur.png
@@ -19,11 +19,11 @@ points:
   - Historique filtrable par mois
   - Widget écran d'accueil
   - Export CSV et sauvegarde
-description: "€nveloppe : gérez votre argent liquide avec un porte-monnaie et
+description: "Enveloppe : gérez votre argent liquide avec un porte-monnaie et
   des enveloppes virtuelles. Sans pub, sans suivi, 100 % hors ligne."
 presentation:
   titre: Le liquide, enfin sous contrôle.
-  texte: "Courses, épargne, argent de poche, budgets familiaux : €nveloppe vous
+  texte: "Courses, épargne, argent de poche, budgets familiaux : Enveloppe vous
     aide à savoir exactement combien vous avez, et où. Comme de vraies
     enveloppes, en plus pratique."
 fonctions:
@@ -58,7 +58,7 @@ infos:
     valeur: Aucune requise
 vie_privee:
   titre: Votre argent ne regarde que vous.
-  texte: €nveloppe fonctionne sans internet, sans compte et sans aucune
+  texte: Enveloppe fonctionne sans internet, sans compte et sans aucune
     autorisation particulière. Vos montants restent sur votre iPhone.
 support:
   appareil: ex. iPhone 15
