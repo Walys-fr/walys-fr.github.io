@@ -32,7 +32,7 @@ Si vous m'écrivez par e-mail, votre message sert uniquement à vous répondre e
 
 ## 6. Vos droits
 
-Conformément au RGPD, vous disposez de droits d'accès, de rectification et d'effacement. Les applications Walys ne détiennent aucune de vos données : vous les exercez directement dans l'app, ou en la supprimant. Si vous m'écrivez, votre message est conservé 12 mois au plus après notre dernier échange, puis supprimé. Pour exercer vos droits sur ces messages, écrivez à [contact.walys@icloud.com](mailto:contact.walys@icloud.com). Vous pouvez également saisir la CNIL ([https://www.cnil.fr](https://www.cnil.fr))).
+Conformément au RGPD, vous disposez de droits d'accès, de rectification et d'effacement. Les applications Walys ne détiennent aucune de vos données : vous les exercez directement dans l'app, ou en la supprimant. Si vous m'écrivez, votre message est conservé 12 mois au plus après notre dernier échange, puis supprimé. Pour exercer vos droits sur ces messages, écrivez à [contact.walys@icloud.com](mailto:contact.walys@icloud.com). Vous pouvez également saisir la CNIL ([https://www.cnil.fr](https://www.cnil.fr)).
 
 ## 7. Modifications
 
