@@ -1,9 +1,12 @@
 ---
 layout: legal
+afficher_apps: true
 titre: Politique de confidentialité
 mise_a_jour: 7 octobre 2026
-resume: Walys ne collecte aucune donnée personnelle, ni dans ses apps, ni sur ce site. Les données de vos apps restent sur vos appareils (et dans votre propre iCloud si vous l'utilisez). Aucune publicité, aucun outil de statistiques, aucun traceur, aucun SDK tiers. Aucun compte à créer, aucun serveur Walys.
-afficher_apps: true
+resume: Walys ne collecte aucune donnée personnelle, ni dans ses apps, ni sur ce
+  site. Les données de vos apps restent sur vos appareils (et dans votre propre
+  iCloud si vous l'utilisez). Aucune publicité, aucun outil de statistiques,
+  aucun traceur, aucun SDK tiers. Aucun compte à créer, aucun serveur Walys.
 ---
 ## 1. Responsable
 
@@ -19,7 +22,7 @@ Ce que vous saisissez dans une app Walys est enregistré localement sur votre ap
 
 ## 4. Achats et abonnements
 
-Les paiements sont gérés par Apple via l'App Store. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires.
+Les paiements sont gérés par Apple via l'App Store. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires. Apple fournit seulement aux développeurs des statistiques agrégées et anonymes (nombre de téléchargements, ventes par pays) qui ne permettent pas de vous identifier.
 
 ## 5. Ce site web
 
@@ -29,8 +32,8 @@ Si vous m'écrivez par e-mail, votre message sert uniquement à vous répondre e
 
 ## 6. Vos droits
 
-Conformément au RGPD, vous disposez de droits d'accès, de rectification et d'effacement. Walys ne détenant aucune de vos données, vous les exercez directement dans l'app ou en la supprimant. Vous pouvez également saisir la CNIL ([cnil.fr](https://www.cnil.fr)).
+Conformément au RGPD, vous disposez de droits d'accès, de rectification et d'effacement. Les applications Walys ne détiennent aucune de vos données : vous les exercez directement dans l'app, ou en la supprimant. Si vous m'écrivez, votre message est conservé 12 mois au plus après notre dernier échange, puis supprimé. Pour exercer vos droits sur ces messages, écrivez à [contact.walys@icloud.com](mailto:contact.walys@icloud.com). Vous pouvez également saisir la CNIL ([https://www.cnil.fr](https://www.cnil.fr))).
 
 ## 7. Modifications
 
-Toute évolution sera publiée sur cette page avec sa date. Le principe fondateur, lui, ne changera pas : vos données vous appartiennent.
+Toute évolution sera publiée sur cette page avec sa date. Si une app devait un jour traiter vos données autrement, cette page et la fiche de l'app le diront avant la mise à jour.
