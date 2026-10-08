@@ -1,0 +1,177 @@
+---
+layout: base
+---
+{%- comment -%}
+  Gabarit de fiche d'app, avec 3 onglets : Présentation, Support, Confidentialité.
+  Les textes se modifient dans Pages CMS › « Apps ».
+{%- endcomment -%}
+{%- assign r = site.data.reglages -%}
+{%- assign ic = site.data.icones -%}
+{%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
+{%- assign a = page -%}
+{%- assign sujet_support = "Support " | append: a.nom -%}
+{%- capture icone_app %}<div class="app-icon xl tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>{% endcapture -%}
+
+<section class="app-hero tint-{{ a.teinte | default: 'bleu' }}">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><a href="{{ '/apps/' | relative_url }}">Apps</a><span class="sep">/</span><span>{{ a.nom | escape }}</span></nav>
+  {{ icone_app }}
+  <div>
+    {% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}
+    <h1>{{ a.nom | escape }}</h1>
+    <p class="tagline">{{ a.slogan | default: a.accroche | escape }}</p>
+    <div class="buttons left">
+      {%- if a.lien_app_store and a.lien_app_store != "" %}
+      <a class="store-btn" href="{{ a.lien_app_store }}" rel="noopener"><span><small>Télécharger sur</small>l'App Store</span></a>
+      {%- elsif a.statut == "dev" %}
+      <span class="store-btn disabled"><span><small>En développement</small>Disponible prochainement</span></span>
+      {%- else %}
+      <span class="store-btn disabled"><span><small>Bientôt sur</small>l'App Store</span></span>
+      {%- endif %}
+      <a class="button secondary" href="#support" data-tab-link>Support</a>
+    </div>
+  </div>
+</section>
+
+<div class="app-subnav" id="onglets">
+  <div class="app-subnav-inner" role="tablist">
+    <b>{{ a.nom | escape }}</b>
+    <a href="#presentation" data-tab-link>Présentation</a>
+    <a href="#support" data-tab-link>Support</a>
+    <a href="#confidentialite" data-tab-link>Confidentialité</a>
+  </div>
+</div>
+
+<!-- ======================= PRÉSENTATION ======================= -->
+<div class="tab-panel" id="presentation">
+  <section class="section">
+    <div class="section-header reveal">
+      <div class="section-label">Présentation</div>
+      <h2 class="section-title small">{{ a.presentation.titre | escape }}</h2>
+      <p class="section-description">{{ a.presentation.texte | escape }}</p>
+    </div>
+    <div class="feature-grid">
+      {%- for f in a.fonctions %}
+      <div class="feature reveal"><div class="icon-box{% cycle '', '', ' accent' %}">{{ svg }}{{ ic[f.icone] }}</svg></div><h4>{{ f.titre | escape }}</h4><p>{{ f.texte | escape }}</p></div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  {%- if a.captures and a.captures.size > 0 %}
+  <section class="band">
+    <div class="section tight">
+      <div class="section-header reveal"><div class="section-label">Aperçu</div><h2 class="section-title small">En images.</h2></div>
+      <div class="gallery{% if a.format_captures == 'mac' %} mac{% endif %}">
+        {%- for c in a.captures %}
+        <img src="{{ c | relative_url }}" alt="Capture d'écran {{ forloop.index }} de {{ a.nom | escape }}" loading="lazy">
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- if a.infos and a.infos.size > 0 %}
+  <section class="section">
+    <div class="section-header reveal"><div class="section-label">Informations</div><h2 class="section-title small">En bref.</h2></div>
+    <div class="specs reveal">
+      {%- for i in a.infos %}<div class="spec"><small>{{ i.libelle | escape }}</small><b>{{ i.valeur | escape }}</b></div>{% endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="section tight">
+    <div class="privacy-hero reveal" style="padding:54px 50px">
+      <div class="section-label">Vie privée</div>
+      <h2 style="font-size:clamp(30px,4.4vw,46px)">{{ a.vie_privee.titre | escape }}</h2>
+      <p class="lead">{{ a.vie_privee.texte | escape }}</p>
+      <div class="privacy-foot"><p><strong>Données collectées par Walys :</strong> aucune.</p><a class="button" href="#confidentialite" data-tab-link>Confidentialité de {{ a.nom | escape }}</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= SUPPORT ======================= -->
+<div class="tab-panel" id="support">
+  <section class="section">
+    <div class="section-header reveal">
+      <div class="section-label">Support</div>
+      <h2 class="section-title small">Besoin d'aide avec {{ a.nom | escape }} ?</h2>
+      <p class="section-description">Les réponses aux questions les plus fréquentes. Vous ne trouvez pas ? Écrivez-moi, je vous réponds personnellement.</p>
+    </div>
+    <div class="support-grid">
+      <div class="faq left reveal">
+        {%- for q in a.faq %}
+        <details><summary>{{ q.question | escape }}</summary><div class="answer">{{ q.reponse | markdownify }}</div></details>
+        {%- endfor %}
+      </div>
+      <aside class="card static support-card reveal">
+        <div class="icon-box accent">{{ svg }}{{ ic.aide }}</svg></div>
+        <h3>Contacter le support</h3>
+        <p>Pour une aide rapide, indiquez dans votre message :</p>
+        <ul>
+          <li>le modèle de votre appareil{% if a.support.appareil != "" %} ({{ a.support.appareil | escape }}){% endif %} ;</li>
+          <li>la version du système{% if a.support.systeme != "" %} ({{ a.support.systeme | escape }}){% endif %} ;</li>
+          <li>la version de l'app (dans ses Réglages) ;</li>
+          <li>ce qui se passe, et ce que vous attendiez.</li>
+        </ul>
+        <a class="button" style="margin-top:22px;width:100%" href="mailto:{{ r.email }}?subject={{ sujet_support | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire au support</span></a>
+        <div class="note"><b>Ne m'envoyez jamais</b> vos données personnelles ni vos fichiers de sauvegarde : je n'en ai pas besoin pour vous aider.</div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= CONFIDENTIALITÉ ======================= -->
+{%- assign c = a.confidentialite -%}
+<div class="tab-panel" id="confidentialite">
+  <section class="section" style="padding-bottom:20px">
+    <div class="section-header reveal" style="margin-bottom:10px">
+      <div class="section-label">Confidentialité</div>
+      <h2 class="section-title small">Politique de confidentialité de {{ a.nom | escape }}</h2>
+      {%- if c.mise_a_jour and c.mise_a_jour != "" %}<p class="section-description">Dernière mise à jour : {{ c.mise_a_jour | escape }}</p>{% endif %}
+    </div>
+  </section>
+  <article class="legal">
+    {%- if c.politique and c.politique.size > 0 %}
+    {%- comment -%} Politique propre à l'app : texte identique à celui affiché dans l'app {%- endcomment -%}
+    {%- for sec in c.politique %}
+    <h2>{{ sec.titre | escape }}</h2>
+    {{ sec.texte | replace: "{email}", r.email | markdownify }}
+    {%- endfor %}
+    {%- else %}
+    <div class="summary">
+      <b>En résumé :</b> {{ a.nom | escape }} ne collecte aucune donnée personnelle.
+      <ul>
+        <li>Vos données restent sur votre appareil.</li>
+        <li>Aucune publicité, aucun outil de statistiques, aucun traceur, aucun SDK tiers.</li>
+        <li>Aucun compte à créer, aucun serveur Walys.</li>
+      </ul>
+    </div>
+    <h2>1. Responsable</h2>
+    <p>{{ a.nom | escape }} est éditée par Wylfried Salcedo, entrepreneur individuel, nom commercial Walys. Contact : <a href="mailto:{{ r.email }}">{{ r.email }}</a>.</p>
+    <h2>2. Données collectées</h2>
+    <p><b>Aucune.</b> {{ a.nom | escape }} ne transmet aucune information à Walys ni à un tiers.</p>
+    <h2>3. Stockage de vos données</h2>
+    {{ c.stockage | markdownify }}
+    {%- if c.autorisations and c.autorisations.size > 0 %}
+    <h2>4. Autorisations et fonctions</h2>
+    <table class="data-table"><thead><tr><th>Élément</th><th>Usage</th></tr></thead><tbody>
+      {%- for p in c.autorisations %}<tr><td>{{ p.element | escape }}</td><td>{{ p.usage | escape }}</td></tr>{% endfor %}
+    </tbody></table>
+    {%- endif %}
+    <h2>5. Achats</h2>
+    <p>Les paiements sont gérés par Apple via l'App Store. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires.</p>
+    <h2>6. Diagnostics</h2>
+    <p>{{ a.nom | escape }} n'intègre aucun outil d'analyse. Si vous avez accepté, dans les réglages de votre appareil, de partager des données d'analyse avec les développeurs, Apple peut transmettre à Walys des rapports de plantage anonymes et agrégés.</p>
+    {%- assign n = 7 %}
+    {%- if c.section_titre and c.section_titre != "" %}
+    <h2>7. {{ c.section_titre | escape }}</h2>
+    {{ c.section_texte | markdownify }}
+    {%- assign n = 8 %}
+    {%- endif %}
+    <h2>{{ n }}. Vos droits</h2>
+    <p>Walys ne détenant aucune de vos données, vous exercez vos droits (accès, rectification, effacement) directement dans l'app, ou en la supprimant. Vous pouvez également saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+    <h2>{{ n | plus: 1 }}. Modifications</h2>
+    <p>Toute évolution de cette politique sera publiée sur cette page, avec sa date de mise à jour.</p>
+    {%- endif %}
+    <p style="margin-top:30px"><a href="{{ '/confidentialite.html' | relative_url }}">Politique de confidentialité générale de Walys →</a></p>
+  </article>
+</div>
