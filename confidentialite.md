@@ -2,7 +2,7 @@
 layout: legal
 afficher_apps: true
 titre: Politique de confidentialité
-mise_a_jour: 7 octobre 2026
+mise_a_jour: 8 octobre 2026
 resume: Walys ne collecte aucune donnée personnelle, ni dans ses apps, ni sur ce
   site. Les données de vos apps restent sur vos appareils (et dans votre propre
   iCloud si vous l'utilisez). Aucune publicité, aucun outil de statistiques,
