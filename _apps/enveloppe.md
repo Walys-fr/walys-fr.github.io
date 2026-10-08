@@ -197,7 +197,7 @@ confidentialite:
         incompatible avec un usage par un enfant accompagné d'un adulte.
     - titre: Contact
       texte: "Pour toute question concernant cette politique de confidentialité, vous
-        pouvez me contacter à l'adresse suivante : {email}"
+        pouvez me contacter à l'adresse suivante : [email]"
   stockage: Toutes vos données (enveloppes, montants, historique) sont
     enregistrées **uniquement sur votre iPhone**. Les sauvegardes et exports ne
     sont créés que lorsque vous le demandez, et enregistrés là où vous le
