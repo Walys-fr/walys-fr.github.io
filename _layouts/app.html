@@ -134,7 +134,7 @@ layout: base
     {%- comment -%} Politique propre à l'app : texte identique à celui affiché dans l'app {%- endcomment -%}
     {%- for sec in c.politique %}
     <h2>{{ sec.titre | escape }}</h2>
-    {{ sec.texte | replace: "{email}", r.email | markdownify }}
+    {{ sec.texte | replace: "[email]", r.email | markdownify }}
     {%- endfor %}
     {%- else %}
     <div class="summary">
