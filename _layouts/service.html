@@ -9,7 +9,8 @@ layout: base
 
 <section class="page-hero">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><a href="{{ '/#services' | relative_url }}">Services</a><span class="sep">/</span><span>{{ page.titre | escape }}</span></nav>
-  <div class="icon-box">{{ svg }}{{ ic[page.icone] }}</svg></div>
+  {%- assign rang = page.ordre | default: 1 | minus: 1 | modulo: 3 | plus: 1 %}
+  <div class="icon-box ic-{{ rang }}">{{ svg }}{{ ic[page.icone] }}</svg></div>
   <h1>{{ page.titre_page | escape }}<br><span class="soft">{{ page.titre_page_couleur | escape }}</span></h1>
   <p class="lead">{{ page.introduction | escape }}</p>
   <div class="buttons left">
@@ -23,7 +24,7 @@ layout: base
   <div class="cards three">
     {%- for o in page.offres %}
     <article class="card static reveal">
-      <div class="icon-box{% if forloop.index == 3 %} accent{% endif %}">{{ svg }}{{ ic[o.icone] }}</svg></div>
+      <div class="icon-box ic-{{ forloop.index0 | modulo: 3 | plus: 1 }}">{{ svg }}{{ ic[o.icone] }}</svg></div>
       <h3>{{ o.titre | escape }}</h3>
       <ul class="checklist">{% for p in o.points %}<li>{{ p | escape }}</li>{% endfor %}</ul>
     </article>

@@ -51,7 +51,8 @@ layout: base
     </div>
     <div class="feature-grid">
       {%- for f in a.fonctions %}
-      <div class="feature reveal"><div class="icon-box{% cycle '', '', ' accent' %}">{{ svg }}{{ ic[f.icone] }}</svg></div><h4>{{ f.titre | escape }}</h4><p>{{ f.texte | escape }}</p></div>
+      {%- assign ligne = forloop.index0 | divided_by: 3 -%}{%- assign coul = forloop.index0 | plus: ligne | modulo: 3 | plus: 1 -%}
+      <div class="feature reveal"><div class="icon-box ic-{{ coul }}">{{ svg }}{{ ic[f.icone] }}</svg></div><h4>{{ f.titre | escape }}</h4><p>{{ f.texte | escape }}</p></div>
       {%- endfor %}
     </div>
   </section>
