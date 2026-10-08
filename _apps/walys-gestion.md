@@ -11,7 +11,6 @@ resume: Clients, devis, dossiers salariés et documents types réunis au même
   endroit. Conçu pour les indépendants, TPE et les PME, entièrement
   personnalisable.
 plateformes: Mac
-prix: À venir
 points:
   - Fiches clients (CRM)
   - Devis et contrats de prestation
