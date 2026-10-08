@@ -46,6 +46,12 @@ fonctions:
   - icone: telecharger
     titre: Export & sauvegarde
     texte: Export CSV et sauvegarde complète, que vous rangez où vous voulez.
+captures:
+  - /assets/images/apps/enveloppe_1206x2622_1.png
+  - /assets/images/apps/enveloppe_1206x2622_2.png
+  - /assets/images/apps/enveloppe_1206x2622_3.png
+  - /assets/images/apps/enveloppe_1206x2622_4.png
+  - /assets/images/apps/enveloppe_1206x2622_5.png
 format_captures: iphone
 infos:
   - libelle: Plateforme
