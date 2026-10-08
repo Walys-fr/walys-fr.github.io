@@ -1,5 +1,5 @@
 ---
-nom: PraticienKit
+nom: Walys ZEN
 ordre: 2
 statut: dev
 icone: /assets/images/apps/PraticienKit-bicolore-couleur.png
@@ -7,9 +7,10 @@ teinte: violet
 accroche: L'outil des praticiens du bien-être.
 slogan: "Fiches patients, agenda, séances et exercices : tout votre cabinet dans
   une app, sans jamais exposer les données de vos patients."
-resume: "Pensé pour les sophrologues et les praticiens Reiki et bien plus à
-  venir : fiches patients, agenda, mode séance guidé et bibliothèque
-  d'exercices. Des données de santé qui ne quittent jamais votre appareil."
+resume: "Conçu pour les sophrologues, praticiens Reiki et accompagnants
+  bien-être indépendants : dossiers de suivi, agenda, séances guidées et
+  bibliothèque d'exercices. Vos données restent sur votre appareil, rien ne le
+  quitte."
 plateformes: Mac · iPhone et iPad à venir
 points:
   - Fiches et historique patients
@@ -18,13 +19,13 @@ points:
   - Dictaphone et musique de séance
   - Bibliothèque d'exercices
   - Export PDF pour vos patients
-description: "PraticienKit : fiches patients, agenda, mode séance et exercices
-  pour sophrologues et praticiens Reiki et plus prochainement. Données de santé
-  100 % locales."
+description: "Walys ZEN : fiches patients, agenda, mode séance et exercices
+  métiers (sophrologues, praticiens Reiki, et plus prochainement). Données de
+  santé 100 % locales."
 presentation:
   titre: Concentrez-vous sur la séance.
   texte: "Pensé d'abord pour les sophrologues, puis pour les praticiens Reiki : un
-    praticien peut exercer plusieurs méthodes. PraticienKit réunit tout ce qu'il
+    praticien peut exercer plusieurs méthodes. Walys ZEN réunit tout ce qu'il
     faut avant, pendant et après la séance."
 fonctions:
   - icone: equipe
@@ -68,13 +69,13 @@ faq:
       complètes dans l'app Fichiers, en local ou dans votre iCloud Drive, au
       choix.
   - question: Qui est responsable des données de mes patients (RGPD) ?
-    reponse: "Vous, en tant que praticien. PraticienKit vous facilite cette
+    reponse: "Vous, en tant que praticien. Walys ZEN vous facilite cette
       responsabilité : aucune donnée n'est transmise à Walys ou à un tiers.
       Protégez votre appareil par un code ou un mot de passe et faites des
       sauvegardes chiffrées régulières."
   - question: Le dictaphone ne fonctionne pas
     reponse: "Vérifiez que l'accès au micro est autorisé : Réglages système ›
-      Confidentialité et sécurité › Micro, puis activez PraticienKit."
+      Confidentialité et sécurité › Micro, puis activez Walys ZEN."
   - question: Comment envoyer un exercice à un patient ?
     reponse: Depuis la bibliothèque, ouvrez l'exercice et choisissez l'export PDF.
       Vous l'envoyez ensuite par le moyen de votre choix (e-mail, AirDrop…).
@@ -85,7 +86,7 @@ faq:
     reponse: Le principe de l'application vous intéresse, je vous laisse me
       contacter afin que nous puissions développer votre activité.
   - question: Quand l'app sera-t-elle disponible ?
-    reponse: PraticienKit est en cours de développement. Écrivez-moi pour être
+    reponse: Walys ZEN est en cours de développement. Écrivez-moi pour être
       prévenu·e du lancement.
 confidentialite:
   mise_a_jour: 7 octobre 2026
@@ -105,7 +106,7 @@ confidentialite:
       usage: Non utilisé pour vos données
   section_titre: Données de santé de vos patients
   section_texte: Le praticien est responsable du traitement des données de ses
-    patients au sens du RGPD. PraticienKit ne transmet aucune de ces données à
+    patients au sens du RGPD. Walys ZEN ne transmet aucune de ces données à
     Walys ni à un tiers. Il vous appartient d'informer vos patients, de
     sécuriser l'accès à vos appareils et de conserver des sauvegardes.
 ---
