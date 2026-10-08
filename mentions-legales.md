@@ -35,4 +35,4 @@ Apple, iPhone, iPad, Mac, iCloud et App Store sont des marques d'Apple Inc. Waly
 
 ## Données personnelles et cookies
 
-Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Voir la politique de confidentialité.
+Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Voir la [politique de confidentialité](https://walys-fr.github.io/confidentialite.html).
