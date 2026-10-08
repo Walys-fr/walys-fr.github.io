@@ -466,3 +466,19 @@ footer{border-top:1px solid var(--line);padding:46px 24px 50px;color:var(--secon
 .app-subnav a.current{color:var(--title);border-bottom-color:var(--blue)}
 .legal ul{padding-left:20px}
 .legal .summary{line-height:1.7}
+
+/* ---------- Trois couleurs de pictos, en alternance ---------- */
+:root{--c3:#2F8F6B;--c3-soft:rgba(47,143,107,.12)}
+@media (prefers-color-scheme:dark){:root{--c3:#5CC49A;--c3-soft:rgba(92,196,154,.14)}}
+.icon-box.ic-1{background:var(--blue-soft);color:var(--blue)}
+.icon-box.ic-2{background:var(--accent-soft);color:var(--accent)}
+.icon-box.ic-3{background:var(--c3-soft);color:var(--c3)}
+
+/* ---------- Pastilles cliquables ---------- */
+a.pill{cursor:pointer;transition:transform .2s var(--ease),background .2s,border-color .2s,color .2s}
+a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:rgba(72,102,147,.35);color:var(--title)}
+.pill .dot.ic-1{background:var(--blue)}
+.pill .dot.ic-2{background:var(--accent)}
+.pill .dot.ic-3{background:var(--c3)}
+.pill .dot.ic-4{background:var(--blue-dark)}
+@media (prefers-color-scheme:dark){.pill .dot.ic-4{background:#E8EEF8}}
