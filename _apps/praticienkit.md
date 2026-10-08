@@ -58,7 +58,7 @@ infos:
     valeur: 100 % locales
 vie_privee:
   titre: Le secret professionnel, par conception.
-  texte: "Les données de vos patients sont des données confidentielle. Elles
+  texte: "Les données de vos patients sont des données confidentielles. Elles
     restent sur vos appareils : ni Walys ni personne d'autre n'y a accès."
 support:
   appareil: ex. MacBook Air M2
