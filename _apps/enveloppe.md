@@ -19,11 +19,11 @@ points:
   - Historique filtrable par mois
   - Widget écran d'accueil
   - Export CSV et sauvegarde
-description: "Envelopp€ : gérez votre argent liquide avec un porte-monnaie et
+description: "Enveloppe : gérez votre argent liquide avec un porte-monnaie et
   des enveloppes virtuelles. Sans pub, sans suivi, 100 % hors ligne."
 presentation:
   titre: Le liquide, enfin sous contrôle.
-  texte: "Courses, épargne, argent de poche, budgets familiaux : Envelopp€ vous
+  texte: "Courses, épargne, argent de poche, budgets familiaux : Enveloppe vous
     aide à savoir exactement combien vous avez, et où. Comme de vraies
     enveloppes, en plus pratique."
 fonctions:
