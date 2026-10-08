@@ -58,7 +58,7 @@ infos:
     valeur: Aucune requise
 vie_privee:
   titre: Votre argent ne regarde que vous.
-  texte: Envelopp€ fonctionne sans internet, sans compte et sans aucune
+  texte: Enveloppe fonctionne sans internet, sans compte et sans aucune
     autorisation particulière. Vos montants restent sur votre iPhone.
 support:
   appareil: ex. iPhone 15
@@ -77,7 +77,7 @@ faq:
       1. Sur l'ancien iPhone, faites une sauvegarde et enregistrez-la dans
       iCloud Drive.
 
-      2. Sur le nouvel iPhone, retéléchargez Envelopp€ depuis l'App Store (sans
+      2. Sur le nouvel iPhone, retéléchargez Enveloppe depuis l'App Store (sans
       repayer, avec le même identifiant Apple).
 
       3. Restaurez la sauvegarde depuis les Réglages de l'app.
@@ -86,9 +86,9 @@ faq:
       fichier n'est créé que lorsque vous le demandez.
   - question: Comment ajouter le widget ?
     reponse: Restez appuyé sur l'écran d'accueil, touchez « Modifier » puis «
-      Ajouter un widget », et cherchez Envelopp€.
+      Ajouter un widget », et cherchez Enveloppe.
   - question: L'app a-t-elle besoin d'internet ?
-    reponse: Non. Envelopp€ fonctionne entièrement hors ligne et n'envoie aucune donnée.
+    reponse: Non. Enveloppe fonctionne entièrement hors ligne et n'envoie aucune donnée.
   - question: "J'ai supprimé l'app : mes données sont-elles perdues ?"
     reponse: "Les données sont stockées dans l'app : la supprimer les efface. Seule
       une sauvegarde que vous avez enregistrée dans Fichiers permet de les
