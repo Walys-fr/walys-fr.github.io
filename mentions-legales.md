@@ -9,9 +9,9 @@ Wylfried Salcedo, entrepreneur individuel (EI)
 
 Nom commercial : Walys
 
-SIRET : **[À COMPLÉTER]**
+SIRET : 97987337900023
 
-Adresse : **[À COMPLÉTER — adresse professionnelle ou de domiciliation]**, La Réunion, France
+Adresse : 4 Allée des bananiers, 97410, Saint-Pierre, La Réunion, France
 
 TVA non applicable, article 293 B du CGI.
 
