@@ -15,9 +15,27 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
 <section class="hero">
   <div class="hero-content">
     <div class="hero-logo logo-chip"><img src="{{ logo }}" alt="Logo Walys" onerror="this.parentElement.style.display='none'"></div>
+    {%- assign services_tries = site.services | sort: "ordre" %}
     <div class="pills">
       {%- for b in d.entete.badges %}
-      <span class="pill"><span class="dot"></span>{{ b | escape }}</span>
+        {%- comment -%} Lien : « app » → page des apps ; sinon le service dont le nom correspond ; à défaut, le service de même position {%- endcomment -%}
+        {%- assign mot = b | slugify: "latin" -%}
+        {%- assign lien = "" -%}{%- assign coul = 1 -%}
+        {%- if mot contains "app" -%}
+          {%- assign lien = "/apps/" -%}{%- assign coul = 4 -%}
+        {%- else -%}
+          {%- for s in services_tries -%}
+            {%- assign sl = s.url | split: "/" | last | remove: ".html" -%}
+            {%- if lien == "" -%}{%- if sl contains mot or mot contains sl -%}
+              {%- assign lien = s.url -%}{%- assign coul = forloop.index0 | modulo: 3 | plus: 1 -%}
+            {%- endif -%}{%- endif -%}
+          {%- endfor -%}
+          {%- if lien == "" -%}
+            {%- assign i = forloop.index0 -%}
+            {%- if services_tries[i] -%}{%- assign lien = services_tries[i].url -%}{%- assign coul = i | modulo: 3 | plus: 1 -%}{%- else -%}{%- assign lien = "/apps/" -%}{%- endif -%}
+          {%- endif -%}
+        {%- endif %}
+      <a class="pill" href="{{ lien | relative_url }}"><span class="dot ic-{{ coul }}"></span>{{ b | escape }}</a>
       {%- endfor %}
     </div>
     <h1>{{ d.entete.titre | escape }}<br><span class="soft">{{ d.entete.titre_couleur | escape }}</span> {{ d.entete.titre_fin | escape }}</h1>
@@ -49,7 +67,7 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
     {%- assign services_tries = site.services | sort: "ordre" %}
     {%- for s in services_tries %}
     <a class="card reveal" href="{{ s.url | relative_url }}">
-      <div class="icon-box{% if forloop.index == 3 %} accent{% endif %}">{{ svg }}{{ ic[s.icone] }}</svg></div>
+      <div class="icon-box ic-{{ forloop.index0 | modulo: 3 | plus: 1 }}">{{ svg }}{{ ic[s.icone] }}</svg></div>
       <h3>{{ s.titre | escape }}</h3>
       <p>{{ s.resume | escape }}</p>
       <span class="card-link">En savoir plus <span>→</span></span>
