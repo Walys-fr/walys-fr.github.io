@@ -4,6 +4,8 @@
 {%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
 {%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
 {%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+{%- assign wl = r.whatsapp_lien | default: "" | strip -%}
+{%- if wl != "" -%}{%- unless wl contains "://" -%}{%- assign wl = wl | prepend: "https://" -%}{%- endunless -%}{%- endif -%}
 
 {%- if page.nom -%}
   {%- assign titre_onglet = page.nom | append: " — " | append: page.accroche | append: " | Walys" -%}
@@ -94,8 +96,8 @@
       <a href="{{ '/confidentialite.html' | relative_url }}">Confidentialité</a>
       <a href="{{ '/mentions-legales.html' | relative_url }}">Mentions légales</a>
       <a href="mailto:{{ r.email }}">{{ r.email }}</a>
-      {%- if wa != "" %}
-      <a href="https://wa.me/{{ wa }}" rel="noopener">WhatsApp</a>
+      {%- if wa != "" or wl != "" %}
+      <a href="{% if wl != "" %}{{ wl }}{% else %}https://wa.me/{{ wa }}{% endif %}" rel="noopener">WhatsApp</a>
       {%- endif %}
     </div>
   </div>

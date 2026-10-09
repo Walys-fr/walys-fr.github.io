@@ -10,6 +10,8 @@ layout: base
 {%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
 {%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
 {%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+{%- assign wl = r.whatsapp_lien | default: "" | strip -%}
+{%- if wl != "" -%}{%- unless wl contains "://" -%}{%- assign wl = wl | prepend: "https://" -%}{%- endunless -%}{%- endif -%}
 
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign a = page -%}
@@ -118,9 +120,9 @@ layout: base
           <li>ce qui se passe, et ce que vous attendiez.</li>
         </ul>
         <a class="button" style="margin-top:22px;width:100%" href="mailto:{{ r.email }}?subject={{ sujet_support | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire au support</span></a>
-        {%- if wa != "" %}
+        {%- if wa != "" or wl != "" %}
         {%- capture msg %}Bonjour, j'ai une question sur l'app {{ a.nom }}.{% endcapture %}
-        <a class="button secondary" style="margin-top:10px;width:100%" href="https://wa.me/{{ wa }}?text={{ msg | url_encode | replace: '+', '%20' }}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>Support par WhatsApp</span></a>
+        <a class="button secondary" style="margin-top:10px;width:100%" href="{% if wl != "" %}{{ wl }}{% else %}https://wa.me/{{ wa }}?text={{ msg | url_encode | replace: '+', '%20' }}{% endif %}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>Support par WhatsApp</span></a>
         {%- endif %}
         <div class="note"><b>Ne m'envoyez jamais</b> vos données personnelles ni vos fichiers de sauvegarde : je n'en ai pas besoin pour vous aider.</div>
       </aside>
