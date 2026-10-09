@@ -83,8 +83,9 @@ faq:
     reponse: Oui. Un même praticien peut activer plusieurs métiers (sophrologie,
       Reiki et plus à venir) avec leurs outils dédiés.
   - question: Pourquoi mon activité n'est pas répertoriée ?
-    reponse: Le principe de l'application vous intéresse, je vous laisse me
-      contacter afin que nous puissions développer votre activité.
+    reponse: "Walys ZEN s’enrichit métier par métier. Si l’app vous intéresse pour
+      votre pratique, écrivez-moi : nous verrons ensemble comment l’adapter à
+      votre activité."
   - question: Quand l'app sera-t-elle disponible ?
     reponse: Walys ZEN est en cours de développement. Écrivez-moi pour être
       prévenu·e du lancement.
