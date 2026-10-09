@@ -9,6 +9,10 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
 {%- assign d = site.data.accueil -%}
 {%- assign r = site.data.reglages -%}
 {%- assign ic = site.data.icones -%}
+{%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
+{%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
+{%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign logo = r.logo | default: "/assets/logos/WalysLogo.png" | relative_url -%}
 
@@ -97,8 +101,8 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
             {%- for p in a.points %}<li>{{ p | escape }}</li>{% endfor %}
           </ul>
           <div class="meta-row">
-            {% if a.plateformes != "" %}<span class="meta">{{ a.plateformes | escape }}</span>{% endif %}
-            {% if a.prix != "" %}<span class="meta">{{ a.prix | escape }}</span>{% endif %}
+            {% if a.plateformes and a.plateformes != "" %}<span class="meta">{{ a.plateformes | escape }}</span>{% endif %}
+            {% if a.prix and a.prix != "" %}<span class="meta">{{ a.prix | escape }}</span>{% endif %}
             <span class="meta">Aucune donnée collectée</span>
           </div>
           <div class="link-row">
@@ -199,9 +203,14 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
 <section id="contact" class="section contact-section">
   <div class="contact-box reveal">
     <div>
-      <h2>{{ d.contact.titre | escape }}</h2>
+      <h2>{{ d.contact.titre | escape | replace: "-", "‑" }}</h2>
       <p>{{ d.contact.texte | escape }}</p>
-      <a class="button" href="mailto:{{ r.email }}">{{ svg }}{{ ic.mail }}</svg><span>{{ r.email }}</span></a>
+      <div class="buttons left contact-buttons">
+        <a class="button" href="mailto:{{ r.email }}">{{ svg }}{{ ic.mail }}</svg><span>{{ r.email }}</span></a>
+        {%- if wa != "" %}
+        <a class="button secondary" href="https://wa.me/{{ wa }}?text={{ 'Bonjour, je vous contacte depuis le site Walys.' | url_encode | replace: '+', '%20' }}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>WhatsApp</span></a>
+        {%- endif %}
+      </div>
     </div>
     <div class="contact-topics">
       {%- for t in d.contact.sujets %}

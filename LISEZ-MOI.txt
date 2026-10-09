@@ -1,0 +1,20 @@
+MISE À JOUR DE LA MISE EN PAGE — à déposer sur GitHub
+=======================================================
+Contient uniquement des fichiers de mise en page : vos textes (Pages CMS) ne sont PAS touchés.
+
+Regroupe toutes les améliorations récentes :
+ - politique de confidentialité propre à chaque app (correctif [email])
+ - pastilles de l'accueil cliquables, pictos en 3 couleurs alternées
+ - boutons WhatsApp (apparaissent quand le numéro est renseigné dans Réglages)
+ - image de partage corrigée (aperçu des liens sur WhatsApp, LinkedIn…)
+ - libellés des pages services harmonisés
+ - logo + nom « Walys » dans le menu et le pied de page
+ - pastille vide supprimée sur les cartes d'apps sans prix
+ - « Parlons-en » ne se coupe plus au tiret
+
+Comment déposer :
+ 1. Dans votre dépôt GitHub : Add file › Upload files.
+ 2. Glissez le CONTENU de ce dossier (index.html, 404.html, apps, _layouts, _data, assets).
+    GitHub remplace les fichiers du même nom, aux mêmes emplacements.
+ 3. Renommez pages.yml en .pages.yml (en remplaçant l'ancien), comme d'habitude.
+ 4. Commit changes, puis vérifiez la coche verte dans l'onglet Actions.
