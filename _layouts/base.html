@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 {%- assign r = site.data.reglages -%}
+{%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
+{%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
+{%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+
 {%- if page.nom -%}
   {%- assign titre_onglet = page.nom | append: " — " | append: page.accroche | append: " | Walys" -%}
   {%- assign desc = page.description | default: page.resume -%}
@@ -29,7 +33,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ titre_onglet | escape }}">
 <meta property="og:description" content="{{ desc | strip_html | escape }}">
-<meta property="og:image" content="{% if page.icone and page.icone != '' %}{{ page.icone | relative_url }}{% else %}{{ logo }}{% endif %}">
+<meta property="og:image" content="{% if page.nom and page.icone and page.icone != '' %}{{ page.icone | absolute_url }}{% else %}{{ r.logo | default: '/assets/logos/WalysLogo.png' | absolute_url }}{% endif %}">
 <link rel="icon" type="image/png" href="{{ logo }}">
 <link rel="apple-touch-icon" href="{{ logo }}">
 <link rel="stylesheet" href="{{ '/assets/css/walys.css' | relative_url }}">
@@ -45,7 +49,8 @@
 <header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="{{ '/' | relative_url }}" class="brand" aria-label="Walys — Accueil">
-      <span class="logo-chip"><img src="{{ logo }}" alt="Walys" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-fallback',textContent:'Walys'}))"></span>
+      <span class="logo-chip"><img src="{{ logo }}" alt="" onerror="this.parentElement.style.display='none'"></span>
+      <span class="brand-name">Walys</span>
     </a>
     <nav class="navigation" id="navigation" aria-label="Navigation principale">
       <a href="{{ '/#services' | relative_url }}"{% if actif == "services" %} class="active"{% endif %}>Services</a>
@@ -65,8 +70,8 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="logo-chip"><img src="{{ logo }}" alt="Walys" onerror="this.parentElement.style.display='none'"></span>
-      <p>{{ r.baseline | escape }}</p>
+      <a href="{{ '/' | relative_url }}" class="brand footer-logo" aria-label="Walys — Accueil"><span class="logo-chip"><img src="{{ logo }}" alt="" onerror="this.parentElement.style.display='none'"></span><span class="brand-name">Walys</span></a>
+      <p>{{ r.baseline | escape | newline_to_br }}</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
@@ -89,6 +94,9 @@
       <a href="{{ '/confidentialite.html' | relative_url }}">Confidentialité</a>
       <a href="{{ '/mentions-legales.html' | relative_url }}">Mentions légales</a>
       <a href="mailto:{{ r.email }}">{{ r.email }}</a>
+      {%- if wa != "" %}
+      <a href="https://wa.me/{{ wa }}" rel="noopener">WhatsApp</a>
+      {%- endif %}
     </div>
   </div>
   <div class="footer-bottom">

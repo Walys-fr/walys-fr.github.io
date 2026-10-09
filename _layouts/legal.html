@@ -3,6 +3,10 @@ layout: base
 ---
 {%- comment -%} Gabarit des pages légales. Les textes se modifient dans Pages CMS › « Pages légales ». {%- endcomment -%}
 {%- assign r = site.data.reglages -%}
+{%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
+{%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
+{%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+
 <section class="page-hero">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><span>{{ page.titre | escape }}</span></nav>
   <h1>{{ page.titre | escape }}</h1>
@@ -25,4 +29,7 @@ layout: base
   {%- endif %}
   <h2>Contact</h2>
   <p><a href="mailto:{{ r.email }}">{{ r.email }}</a></p>
+  {%- if wa != "" %}
+  <p>WhatsApp : <a href="https://wa.me/{{ wa }}" rel="noopener">+{{ wa }}</a>. Si vous choisissez de me contacter par WhatsApp, vos échanges transitent par ce service, édité par Meta et soumis à sa propre politique de confidentialité. Ce site ne charge aucun élément de WhatsApp : il s'agit d'un simple lien.</p>
+  {%- endif %}
 </article>

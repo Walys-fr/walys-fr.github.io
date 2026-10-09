@@ -4,6 +4,10 @@ layout: base
 {%- comment -%} Gabarit d'une page de service. Les textes se modifient dans Pages CMS › « Services ». {%- endcomment -%}
 {%- assign r = site.data.reglages -%}
 {%- assign ic = site.data.icones -%}
+{%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
+{%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
+{%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign sujet = page.sujet_email | default: page.titre -%}
 
@@ -15,8 +19,9 @@ layout: base
   <p class="lead">{{ page.introduction | escape }}</p>
   <div class="buttons left">
     <a class="button" href="mailto:{{ r.email }}?subject={{ sujet | uri_escape }}">Demander un échange</a>
-    <a class="button secondary" href="#offre">Ce que je propose</a>
+    <a class="button secondary" href="#offre">Voir le détail</a>
   </div>
+  <p class="hero-note">Réponse personnelle, sans engagement.</p>
 </section>
 
 <section id="offre" class="section">
@@ -60,9 +65,9 @@ layout: base
 <section class="band">
   <div class="section">
     <div class="section-header reveal">
-      <div class="section-label">Réalisations</div>
+      <div class="section-label">Mes applications</div>
       <h2 class="section-title small">Les apps Walys.</h2>
-      <p class="section-description">Mes propres applications, conçues avec les mêmes exigences que celles que je propose à mes clients.</p>
+      <p class="section-description">Mes propres applications, publiées ou en préparation, conçues selon les mêmes principes que ce que je propose : simplicité et respect de vos données.</p>
     </div>
     <div class="app-tiles">
       {%- assign apps_tries = site.apps | sort: "ordre" %}
@@ -86,7 +91,13 @@ layout: base
     <div>
       <h2>Parlons de votre besoin.</h2>
       <p>Décrivez-moi votre situation en quelques lignes : je vous réponds personnellement avec une proposition adaptée, sans engagement.</p>
-      <a class="button" href="mailto:{{ r.email }}?subject={{ sujet | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire un e-mail</span></a>
+      <div class="buttons left contact-buttons">
+        <a class="button" href="mailto:{{ r.email }}?subject={{ sujet | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Demander un échange</span></a>
+        {%- if wa != "" %}
+        {%- capture msg %}Bonjour, je vous contacte au sujet de : {{ page.titre }}.{% endcapture %}
+        <a class="button secondary" href="https://wa.me/{{ wa }}?text={{ msg | url_encode | replace: '+', '%20' }}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>WhatsApp</span></a>
+        {%- endif %}
+      </div>
     </div>
   </div>
 </section>

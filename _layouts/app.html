@@ -7,6 +7,10 @@ layout: base
 {%- endcomment -%}
 {%- assign r = site.data.reglages -%}
 {%- assign ic = site.data.icones -%}
+{%- assign wa = r.whatsapp | default: "" | remove: " " | remove: "+" | remove: "." | remove: "-" -%}
+{%- assign wa2 = wa | slice: 0, 2 -%}{%- assign wa1 = wa | slice: 0 -%}
+{%- if wa2 == "00" -%}{%- assign wa = wa | remove_first: "00" -%}{%- elsif wa1 == "0" -%}{%- assign wa = wa | remove_first: "0" | prepend: "262" -%}{%- endif -%}
+
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign a = page -%}
 {%- assign sujet_support = "Support " | append: a.nom -%}
@@ -21,11 +25,11 @@ layout: base
     <p class="tagline">{{ a.slogan | default: a.accroche | escape }}</p>
     <div class="buttons left">
       {%- if a.lien_app_store and a.lien_app_store != "" %}
-      <a class="store-btn" href="{{ a.lien_app_store }}" rel="noopener"><span><small>Télécharger sur</small>l'App Store</span></a>
+      <a class="store-btn" href="{{ a.lien_app_store }}" rel="noopener"><span><small>Télécharger sur</small> l'App Store</span></a>
       {%- elsif a.statut == "dev" %}
-      <span class="store-btn disabled"><span><small>En développement</small>Disponible prochainement</span></span>
+      <span class="store-btn disabled"><span><small>En développement</small> Disponible prochainement</span></span>
       {%- else %}
-      <span class="store-btn disabled"><span><small>Bientôt sur</small>l'App Store</span></span>
+      <span class="store-btn disabled"><span><small>Bientôt sur</small> l'App Store</span></span>
       {%- endif %}
       <a class="button secondary" href="#support" data-tab-link>Support</a>
     </div>
@@ -114,6 +118,10 @@ layout: base
           <li>ce qui se passe, et ce que vous attendiez.</li>
         </ul>
         <a class="button" style="margin-top:22px;width:100%" href="mailto:{{ r.email }}?subject={{ sujet_support | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire au support</span></a>
+        {%- if wa != "" %}
+        {%- capture msg %}Bonjour, j'ai une question sur l'app {{ a.nom }}.{% endcapture %}
+        <a class="button secondary" style="margin-top:10px;width:100%" href="https://wa.me/{{ wa }}?text={{ msg | url_encode | replace: '+', '%20' }}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>Support par WhatsApp</span></a>
+        {%- endif %}
         <div class="note"><b>Ne m'envoyez jamais</b> vos données personnelles ni vos fichiers de sauvegarde : je n'en ai pas besoin pour vous aider.</div>
       </aside>
     </div>
