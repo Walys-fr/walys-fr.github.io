@@ -21,6 +21,7 @@
   {%- assign desc = r.description_site -%}
 {%- endif -%}
 {%- assign logo = r.logo | default: "/assets/logos/WalysLogo.png" | relative_url -%}
+{%- assign logo_nuit = "" -%}{%- if r.logo_nuit and r.logo_nuit != "" -%}{%- assign logo_nuit = r.logo_nuit | relative_url -%}{%- endif -%}
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -36,7 +37,8 @@
 <meta property="og:title" content="{{ titre_onglet | escape }}">
 <meta property="og:description" content="{{ desc | strip_html | escape }}">
 <meta property="og:image" content="{% if page.nom and page.icone and page.icone != '' %}{{ page.icone | absolute_url }}{% else %}{{ r.logo | default: '/assets/logos/WalysLogo.png' | absolute_url }}{% endif %}">
-<link rel="icon" type="image/png" href="{{ logo }}">
+<link rel="icon" type="image/png" href="{{ logo }}"{% if logo_nuit != "" %} media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="{{ logo_nuit }}" media="(prefers-color-scheme: dark)"{% endif %}>
 <link rel="apple-touch-icon" href="{{ logo }}">
 <link rel="stylesheet" href="{{ '/assets/css/walys.css' | relative_url }}">
 </head>
@@ -51,7 +53,7 @@
 <header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="{{ '/' | relative_url }}" class="brand" aria-label="Walys — Accueil">
-      <span class="logo-chip"><img src="{{ logo }}" alt="" onerror="this.parentElement.style.display='none'"></span>
+      <span class="logo-chip{% if logo_nuit != "" %} nuit-ok{% endif %}"><picture>{% if logo_nuit != "" %}<source srcset="{{ logo_nuit }}" media="(prefers-color-scheme: dark)">{% endif %}<img src="{{ logo }}" alt="" onerror="this.closest('.logo-chip').style.display='none'"></picture></span>
       <span class="brand-name">Walys</span>
     </a>
     <nav class="navigation" id="navigation" aria-label="Navigation principale">
@@ -72,7 +74,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="{{ '/' | relative_url }}" class="brand footer-logo" aria-label="Walys — Accueil"><span class="logo-chip"><img src="{{ logo }}" alt="" onerror="this.parentElement.style.display='none'"></span><span class="brand-name">Walys</span></a>
+      <a href="{{ '/' | relative_url }}" class="brand footer-logo" aria-label="Walys — Accueil"><span class="logo-chip{% if logo_nuit != "" %} nuit-ok{% endif %}"><picture>{% if logo_nuit != "" %}<source srcset="{{ logo_nuit }}" media="(prefers-color-scheme: dark)">{% endif %}<img src="{{ logo }}" alt="" onerror="this.closest('.logo-chip').style.display='none'"></picture></span><span class="brand-name">Walys</span></a>
       <p>{{ r.baseline | escape | newline_to_br }}</p>
     </div>
     <div class="footer-col">
