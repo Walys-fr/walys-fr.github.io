@@ -76,8 +76,14 @@ faq:
       iCloud Drive). Faites-le régulièrement, surtout avant de changer de
       téléphone."
   - question: Comment restaurer une sauvegarde ?
-    reponse: Dans les Réglages de l'app, choisissez la restauration puis
-      sélectionnez votre fichier de sauvegarde dans l'app Fichiers.
+    reponse: >-
+      Dans les Réglages de l’app, choisissez « Restaurer », puis sélectionnez
+      votre fichier de sauvegarde dans l’app Fichiers.
+
+      Attention : la restauration remplace toutes les données actuellement
+      présentes dans l’app par celles de la sauvegarde. Si vous avez ajouté des
+      opérations depuis cette sauvegarde, faites d’abord une nouvelle sauvegarde
+      pour ne rien perdre.
   - question: "Je change d'iPhone : comment garder mes données ?"
     reponse: >-
       1. Sur l'ancien iPhone, faites une sauvegarde et enregistrez-la dans
