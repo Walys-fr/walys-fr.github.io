@@ -57,7 +57,7 @@ infos:
   - libelle: Plateforme
     valeur: iPhone
   - libelle: Prix
-    valeur: Achat unique
+    valeur: 4,99 € · achat unique
   - libelle: Langues
     valeur: 7 langues
   - libelle: Connexion
