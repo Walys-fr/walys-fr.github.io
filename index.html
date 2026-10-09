@@ -17,10 +17,11 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
 
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign logo = r.logo | default: "/assets/logos/WalysLogo.png" | relative_url -%}
+{%- assign logo_nuit = "" -%}{%- if r.logo_nuit and r.logo_nuit != "" -%}{%- assign logo_nuit = r.logo_nuit | relative_url -%}{%- endif -%}
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-logo logo-chip"><img src="{{ logo }}" alt="Logo Walys" onerror="this.parentElement.style.display='none'"></div>
+    <div class="hero-logo logo-chip{% if logo_nuit != "" %} nuit-ok{% endif %}"><picture>{% if logo_nuit != "" %}<source srcset="{{ logo_nuit }}" media="(prefers-color-scheme: dark)">{% endif %}<img src="{{ logo }}" alt="Logo Walys" onerror="this.closest('.logo-chip').style.display='none'"></picture></div>
     {%- assign services_tries = site.services | sort: "ordre" %}
     <div class="pills">
       {%- for b in d.entete.badges %}
