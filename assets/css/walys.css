@@ -482,3 +482,21 @@ a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:r
 .pill .dot.ic-3{background:var(--c3)}
 .pill .dot.ic-4{background:var(--blue-dark)}
 @media (prefers-color-scheme:dark){.pill .dot.ic-4{background:#E8EEF8}}
+
+/* ---------- Boutons de contact (e-mail + WhatsApp) ---------- */
+.contact-buttons{margin-top:30px}
+.contact-box .contact-buttons .button{margin-top:0}
+.contact-box .button.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.contact-box .button.secondary:hover{background:rgba(255,255,255,.2)}
+
+.hero-note{margin:14px 0 0;font-size:14px;color:var(--secondary)}
+.store-btn small{display:block}
+
+/* ---------- Logo + nom dans le menu et le pied de page ---------- */
+.brand img{height:40px}
+.brand-name{font-weight:700;font-size:21px;letter-spacing:-.03em;color:var(--title)}
+.footer-logo{margin-bottom:14px}
+.footer-logo img{height:34px}
+.footer-logo .brand-name{font-size:18px}
+.footer-brand .footer-logo .logo-chip{margin-bottom:0}
+@media (prefers-color-scheme:dark){.brand .logo-chip{padding:4px 7px;border-radius:11px}}
