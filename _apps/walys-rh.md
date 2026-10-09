@@ -17,7 +17,7 @@ points:
   - Dossiers salariés
   - Paie et éléments variables
   - Modèles de documents modifiables
-  - Préparation des accompagnements
+  - Préparation des formations
 description: "Walys RH : clients, devis, dossiers salariés et documents types
   réunis dans une app Mac. Données locales, sans cloud tiers."
 presentation:
