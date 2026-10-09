@@ -500,3 +500,7 @@ a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:r
 .footer-logo .brand-name{font-size:18px}
 .footer-brand .footer-logo .logo-chip{margin-bottom:0}
 @media (prefers-color-scheme:dark){.brand .logo-chip{padding:4px 7px;border-radius:11px}}
+
+/* Logo nuit : sans pastille claire quand une version nuit existe */
+.logo-chip picture{display:contents}
+@media (prefers-color-scheme:dark){.logo-chip.nuit-ok,.brand .logo-chip.nuit-ok,.hero-logo.logo-chip.nuit-ok{background:none;padding:0}}
