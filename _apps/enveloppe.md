@@ -46,6 +46,15 @@ fonctions:
   - icone: telecharger
     titre: Export & sauvegarde
     texte: Export CSV et sauvegarde complète, que vous rangez où vous voulez.
+captures:
+  - /assets/images/apps/capture_2.jpg
+  - /assets/images/apps/capture_4.jpg
+  - /assets/images/apps/capture_1.jpg
+  - /assets/images/apps/capture_2.jpg
+  - /assets/images/apps/capture_3.jpg
+  - /assets/images/apps/capture_4.jpg
+  - /assets/images/apps/capture_5.jpg
+  - /assets/images/apps/capture_6.jpg
 format_captures: iphone
 infos:
   - libelle: Plateforme
