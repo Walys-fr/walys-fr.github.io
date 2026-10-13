@@ -2,7 +2,7 @@
 nom: Walys RH
 ordre: 3
 statut: dev
-icone: /assets/images/apps/WalysRH-bicolore-couleur.png
+icone: /assets/images/apps/Logo Walys RH.png
 teinte: bleu
 accroche: Votre bureau RH et administratif, en une seule app Mac.
 slogan: "Clients, devis, dossiers salariés et documents types : votre bureau RH
