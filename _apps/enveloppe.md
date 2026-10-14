@@ -1,7 +1,8 @@
 ---
 nom: Enveloppe
 ordre: 1
-statut: bientot
+statut: dispo
+lien_app_store: https://apps.apple.com/fr/app/enveloppe/id6820446938
 icone: /assets/images/apps/Enveloppe-bicolore-couleur-1.png
 teinte: vert
 accroche: Gérez votre argent liquide, billet par billet.
