@@ -63,4 +63,27 @@ faq:
   - question: Puis-je synchroniser mes documents entre mon iPhone et mon Mac ?
     reponse: Oui, la synchronisation s'effectue de manière sécurisée via votre
       propre compte iCloud personnel.
+confidentialite:
+  mise_a_jour: 19 octobre 2026
+  politique:
+    - titre: Collecte des données
+      texte: Walys Docs ne collecte, ne stocke et ne transmet aucune donnée
+        personnelle ni aucun document sur des serveurs tiers. Tout le traitement
+        des données est effectué directement sur votre appareil.
+    - titre: Sécurité et Chiffrement
+      texte: Vos documents et vos fichiers de sauvegarde sont protégés par les
+        mécanismes de sécurité natifs d'Apple et un chiffrement renforcé.
+  stockage: Exclusivement sur votre appareil (stockage local) et dans votre espace
+    iCloud personnel si vous activez la synchronisation.
+  autorisations:
+    - element: Appareil photo
+      usage: Uniquement pour numériser vos documents physiques.
+    - element: Notifications
+      usage: Pour vous alerter des dates d'expiration de vos documents.
+    - element: Accès aux fichiers / Photos
+      usage: Pour vous permettre d'importer vos documents existants.
+  section_titre: Rejoignez le programme Bêta
+  section_texte: L'application est actuellement en cours de développement. Si vous
+    souhaitez tester Walys Docs en avant-première sur iOS, iPadOS ou macOS,
+    contactez-moi directement ou suivez l'avancement du projet.
 ---
