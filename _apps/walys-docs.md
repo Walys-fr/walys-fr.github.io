@@ -30,7 +30,7 @@ fonctions:
     texte: "Scannez ou déposez un fichier : l'application identifie le document, lui
       donne un nom propre et clair, puis le classe automatiquement au bon
       endroit."
-  - icone: interdit
+  - icone: calendrier
     titre: Alertes d'expiration intelligentes
     texte: Ne laissez plus vos cartes d'identité, passeports, contrôles techniques
       ou contrats d'assurance arriver à échéance sans être prévenu à temps.
