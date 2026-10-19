@@ -43,10 +43,12 @@ fonctions:
     texte: Exportez et sauvegardez vos données dans un format intégralement chiffré
       pour une sérénité totale.
 infos:
-  - valeur: 100 % local et privé
-  - valeur: Aucun serveur tiers
-  - valeur: Sauvegardes chiffrées
-  - valeur: Application native Apple (iOS, iPadOS, macOS)
+  - libelle: Vos données
+    valeur: 100 % local et privé
+  - libelle: Sécurité
+    valeur: Sauvegardes chiffrées
+  - libelle: Plateforme
+    valeur: Application native Apple (iOS, iPadOS, macOS)
 vie_privee:
   titre: Vos documents restent votre propriété exclusive.
   texte: "Vos pièces d'identité, factures et contrats ne concernent que vous.
