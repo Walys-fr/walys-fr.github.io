@@ -47,4 +47,20 @@ infos:
   - libelle: Aucun serveur tiers
   - libelle: Sauvegardes chiffrées
   - libelle: Application native Apple (iOS, iPadOS, macOS)
+vie_privee:
+  titre: Vos documents restent votre propriété exclusive.
+  texte: "Vos pièces d'identité, factures et contrats ne concernent que vous.
+    Walys Docs fonctionne selon un principe de confidentialité stricte : aucun
+    document n'est envoyé sur des serveurs externes. Vos données sont chiffrées
+    et stockées uniquement sur votre appareil ou votre iCloud personnel."
+faq:
+  - question: Mes documents sont-ils envoyés sur des serveurs ?
+    reponse: Non. Walys Docs fonctionne à 100 % en local sur vos appareils Apple.
+      Aucune donnée personnelle ne transite par un serveur externe.
+  - question: Comment sont protégées mes sauvegardes ?
+    reponse: Toutes les sauvegardes générées par l'application sont intégralement
+      chiffrées pour empêcher tout accès non autorisé.
+  - question: Puis-je synchroniser mes documents entre mon iPhone et mon Mac ?
+    reponse: Oui, la synchronisation s'effectue de manière sécurisée via votre
+      propre compte iCloud personnel.
 ---
