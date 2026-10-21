@@ -1,5 +1,5 @@
 ---
-nom: Walys RH
+nom: Bureau
 ordre: 3
 statut: dev
 icone: /assets/images/apps/Logo Walys RH.png
@@ -18,11 +18,11 @@ points:
   - Paie et éléments variables
   - Modèles de documents modifiables
   - Préparation des formations
-description: "Walys RH : clients, devis, dossiers salariés et documents types
+description: "Bureau : clients, devis, dossiers salariés et documents types
   réunis dans une app Mac. Données locales, sans cloud tiers."
 presentation:
   titre: Tous vos dossiers, un seul endroit.
-  texte: Née de mon propre quotidien de consultant freelance, Walys RH remplace la
+  texte: Née de mon propre quotidien de consultant freelance, Bureau remplace la
     pile de fichiers Excel, Word et PDF par un outil unique, pensé pour les
     indépendants, TPE et les PME.
 fonctions:
@@ -69,12 +69,11 @@ faq:
     reponse: Uniquement sur votre Mac. Pensez à faire des sauvegardes régulières
       (Time Machine ou sauvegarde de l'app).
   - question: Qui est responsable des données de mes clients et salariés ?
-    reponse: Vous, en tant qu'utilisateur professionnel. Walys RH vous facilite
-      cette responsabilité en ne transmettant aucune donnée à Walys ni à un
-      tiers.
+    reponse: Vous, en tant qu'utilisateur professionnel. Bureau vous facilite cette
+      responsabilité en ne transmettant aucune donnée à Walys ni à un tiers.
   - question: Quand l'app sera-t-elle disponible ?
-    reponse: Walys RH est en cours de développement. Écrivez-moi pour suivre le
-      projet ou devenir testeur.
+    reponse: Bureau est en cours de développement. Écrivez-moi pour suivre le projet
+      ou devenir testeur.
 confidentialite:
   mise_a_jour: 7 octobre 2026
   stockage: Toutes vos données (clients, devis, dossiers salariés, documents) sont
@@ -89,6 +88,6 @@ confidentialite:
       usage: Uniquement à votre demande
   section_titre: Données de vos clients et salariés
   section_texte: L'utilisateur professionnel est responsable du traitement des
-    données de ses clients et salariés au sens du RGPD. Walys RH ne transmet
+    données de ses clients et salariés au sens du RGPD. Bureau ne transmet
     aucune de ces données à Walys ni à un tiers.
 ---
