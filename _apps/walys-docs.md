@@ -2,7 +2,7 @@
 nom: Dossiers
 ordre: 4
 statut: dev
-icone: /assets/images/apps/AppIcon-iOS-Default-1024@1x.png
+icone: /assets/images/apps/Collé 21-10-2026 à 19.29.06.png
 teinte: bleu
 accroche: Votre coffre-fort documentaire intelligent et automatisé.
 slogan: Factures, papiers d'identité, garanties, contrats d'assurance... Ne
