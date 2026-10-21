@@ -1,5 +1,5 @@
 ---
-nom: Walys ZEN
+nom: Aura Pro
 ordre: 2
 statut: dev
 icone: /assets/images/apps/PraticienKit-bicolore-couleur.png
@@ -19,13 +19,13 @@ points:
   - Dictaphone et musique de séance
   - Bibliothèque d'exercices
   - Export PDF pour vos patients
-description: "Walys ZEN : fiches patients, agenda, mode séance et exercices
+description: "Aura Pro : fiches patients, agenda, mode séance et exercices
   métiers (sophrologues, praticiens Reiki, et plus prochainement). Données de
   santé 100 % locales."
 presentation:
   titre: Concentrez-vous sur la séance.
   texte: "Pensé d'abord pour les sophrologues, puis pour les praticiens Reiki : un
-    praticien peut exercer plusieurs méthodes. Walys ZEN réunit tout ce qu'il
+    praticien peut exercer plusieurs méthodes. Aura Pro réunit tout ce qu'il
     faut avant, pendant et après la séance."
 fonctions:
   - icone: equipe
@@ -69,13 +69,13 @@ faq:
       complètes dans l'app Fichiers, en local ou dans votre iCloud Drive, au
       choix.
   - question: Qui est responsable des données de mes patients (RGPD) ?
-    reponse: "Vous, en tant que praticien. Walys ZEN vous facilite cette
+    reponse: "Vous, en tant que praticien. Aura Pro vous facilite cette
       responsabilité : aucune donnée n'est transmise à Walys ou à un tiers.
       Protégez votre appareil par un code ou un mot de passe et faites des
       sauvegardes chiffrées régulières."
   - question: Le dictaphone ne fonctionne pas
     reponse: "Vérifiez que l'accès au micro est autorisé : Réglages système ›
-      Confidentialité et sécurité › Micro, puis activez Walys ZEN."
+      Confidentialité et sécurité › Micro, puis activez Aura Pro."
   - question: Comment envoyer un exercice à un patient ?
     reponse: Depuis la bibliothèque, ouvrez l'exercice et choisissez l'export PDF.
       Vous l'envoyez ensuite par le moyen de votre choix (e-mail, AirDrop…).
@@ -83,12 +83,12 @@ faq:
     reponse: Oui. Un même praticien peut activer plusieurs métiers (sophrologie,
       Reiki et plus à venir) avec leurs outils dédiés.
   - question: Pourquoi mon activité n'est pas répertoriée ?
-    reponse: "Walys ZEN s’enrichit métier par métier. Si l’app vous intéresse pour
+    reponse: "Aura Pro s’enrichit métier par métier. Si l’app vous intéresse pour
       votre pratique, écrivez-moi : nous verrons ensemble comment l’adapter à
       votre activité."
   - question: Quand l'app sera-t-elle disponible ?
-    reponse: Walys ZEN est en cours de développement. Écrivez-moi pour être
-      prévenu·e du lancement.
+    reponse: Aura Pro est en cours de développement. Écrivez-moi pour être prévenu·e
+      du lancement.
 confidentialite:
   mise_a_jour: 7 octobre 2026
   stockage: Toutes les données (patients, rendez-vous, séances, enregistrements
@@ -107,7 +107,7 @@ confidentialite:
       usage: Non utilisé pour vos données
   section_titre: Données de santé de vos patients
   section_texte: Le praticien est responsable du traitement des données de ses
-    patients au sens du RGPD. Walys ZEN ne transmet aucune de ces données à
-    Walys ni à un tiers. Il vous appartient d'informer vos patients, de
-    sécuriser l'accès à vos appareils et de conserver des sauvegardes.
+    patients au sens du RGPD. Aura Pro ne transmet aucune de ces données à Walys
+    ni à un tiers. Il vous appartient d'informer vos patients, de sécuriser
+    l'accès à vos appareils et de conserver des sauvegardes.
 ---
