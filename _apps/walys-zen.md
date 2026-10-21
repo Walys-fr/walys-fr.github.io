@@ -2,7 +2,7 @@
 nom: Aura Pro
 ordre: 2
 statut: dev
-icone: /assets/images/apps/PraticienKit-bicolore-couleur.png
+icone: /assets/images/apps/Aura.png
 teinte: violet
 accroche: L'outil des praticiens du bien-être.
 slogan: "Fiches patients, agenda, séances et exercices : tout votre cabinet dans
