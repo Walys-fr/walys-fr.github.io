@@ -36,10 +36,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ titre_onglet | escape }}">
 <meta property="og:description" content="{{ desc | strip_html | escape }}">
-<meta property="og:image" content="{% if page.nom and page.icone and page.icone != '' %}{{ page.icone | absolute_url }}{% else %}{{ r.logo | default: '/assets/logos/WalysLogo.png' | absolute_url }}{% endif %}">
-<link rel="icon" type="image/png" href="{{ logo }}"{% if logo_nuit != "" %} media="(prefers-color-scheme: light)">
-<link rel="icon" type="image/png" href="{{ logo_nuit }}" media="(prefers-color-scheme: dark)"{% endif %}>
-<link rel="apple-touch-icon" href="{{ logo }}">
+<meta property="og:image" content="{% if page.nom and page.icone and page.icone != '' %}{{ page.icone | absolute_url }}{% else %}{{ '/assets/favicon/favicon-512.png' | absolute_url }}{% endif %}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon/favicon-192.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/walys.css' | relative_url }}">
 </head>
 {%- assign actif = "" -%}
