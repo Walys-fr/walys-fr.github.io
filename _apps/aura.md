@@ -5,7 +5,7 @@ published: true
 statut: dev
 icone: /assets/images/apps/AppIcon-iOS-Default-1024@1x-2.png
 icone_nuit: /assets/images/apps/AppIcon-iOS-Dark-1024@1x-1.png
-teinte: violet
+teinte: vert
 accroche: L'outil des praticiens du bien-être.
 slogan: "Fiches patients, agenda, séances et exercices : tout votre cabinet dans
   une app, sans jamais exposer les données de vos patients."
