@@ -16,7 +16,7 @@ layout: base
 {%- capture svg %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% endcapture -%}
 {%- assign a = page -%}
 {%- assign sujet_support = "Support " | append: a.nom -%}
-{%- capture icone_app %}<div class="app-icon xl tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>{% endcapture -%}
+{%- capture icone_app %}<div class="app-icon xl{% if a.icone and a.icone != "" %} img-ok{% endif %} tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>{% endcapture -%}
 
 <section class="app-hero tint-{{ a.teinte | default: 'bleu' }}">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><a href="{{ '/apps/' | relative_url }}">Apps</a><span class="sep">/</span><span>{{ a.nom | escape }}</span></nav>
