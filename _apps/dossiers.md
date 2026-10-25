@@ -1,8 +1,10 @@
 ---
 nom: Dossiers
 ordre: 4
+published: true
 statut: bientot
 icone: /assets/images/apps/AppIcon-iOS-Default-1024@1x-1.png
+icone_nuit: /assets/images/apps/AppIcon-iOS-Dark-1024@1x.png
 teinte: orange
 accroche: Vos papiers rangés tout seuls, chiffrés sur vos appareils.
 slogan: "Factures, papiers d'identité, contrats, garanties : Dossiers les nomme,
