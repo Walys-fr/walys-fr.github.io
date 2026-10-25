@@ -26,7 +26,7 @@ description: "Dossiers : rangez, nommez et retrouvez automatiquement vos papiers
   sur iPhone, iPad et Mac. Chiffré sur l'appareil, sans compte, sans pub, sans
   suivi."
 presentation:
-  titre: La paperasse, rangée sans y penser.
+  titre: Les papiers, rangés sans y penser.
   texte: "Ajoutez un document, c'est tout. Dossiers lit le texte, reconnaît de
     quoi il s'agit (facture, avis d'impôt, carte grise, contrat d'assurance,
     ordonnance...), lui donne un nom clair, le classe et note ses dates
