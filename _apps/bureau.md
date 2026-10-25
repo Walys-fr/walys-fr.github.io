@@ -1,8 +1,10 @@
 ---
 nom: Bureau
 ordre: 3
+published: true
 statut: dev
-icone: /assets/images/apps/Bureau.png
+icone: /assets/images/apps/AppIcon-iOS-Default-1024@1x-3.png
+icone_nuit: /assets/images/apps/AppIcon-iOS-Dark-1024@1x-2.png
 teinte: bleu
 accroche: Votre bureau RH et administratif, en une seule app Mac.
 slogan: "Clients, devis, dossiers salariés et documents types : votre bureau RH
