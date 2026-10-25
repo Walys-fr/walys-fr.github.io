@@ -1,9 +1,11 @@
 ---
 nom: Enveloppe
 ordre: 1
+published: true
 statut: dispo
 lien_app_store: https://apps.apple.com/fr/app/enveloppe/id6820446938
-icone: /assets/images/apps/Enveloppe.png
+icone: /assets/images/apps/AppIcon 2-iOS-Default-1024@1x.png
+icone_nuit: /assets/images/apps/AppIcon 2-iOS-Dark-1024@1x.png
 teinte: vert
 accroche: Gérez votre argent liquide, billet par billet.
 slogan: Gérez votre argent liquide, billet par billet. Simple, rapide et
