@@ -1,6 +1,6 @@
 ---
 nom: Dossiers
-ordre: 4
+ordre: 2
 published: true
 statut: bientot
 icone: /assets/images/apps/AppIcon-iOS-Default-1024@1x-1.png
