@@ -504,3 +504,13 @@ a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:r
 /* Logo nuit : sans pastille claire quand une version nuit existe */
 .logo-chip picture{display:contents}
 @media (prefers-color-scheme:dark){.logo-chip.nuit-ok,.brand .logo-chip.nuit-ok,.hero-logo.logo-chip.nuit-ok{background:none;padding:0}}
+
+/* Icônes exportées d'Icon Composer : coins déjà arrondis et transparents.
+   Le site ne recoupe pas l'image et l'ombre suit la forme réelle de l'icône. */
+.app-icon.img-ok{border-radius:0;overflow:visible;box-shadow:none;background:none}
+.app-icon.img-ok img{display:block;filter:drop-shadow(0 14px 24px rgba(35,54,86,.20)) drop-shadow(0 2px 4px rgba(35,54,86,.10))}
+.app-icon.sm.img-ok img{filter:drop-shadow(0 6px 12px rgba(35,54,86,.18)) drop-shadow(0 1px 2px rgba(35,54,86,.10))}
+@media (prefers-color-scheme:dark){
+  .app-icon.img-ok img{filter:drop-shadow(0 14px 26px rgba(0,0,0,.45)) drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+  .app-icon.sm.img-ok img{filter:drop-shadow(0 6px 12px rgba(0,0,0,.40))}
+}
