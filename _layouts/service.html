@@ -75,7 +75,7 @@ layout: base
       {%- assign apps_tries = site.apps | sort: "ordre" %}
       {%- for a in apps_tries %}
       <a class="card app-tile reveal" href="{{ a.url | relative_url }}">
-        <div class="app-icon sm{% if a.icone and a.icone != "" %} img-ok{% endif %} tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}" loading="lazy">{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>
+        <div class="app-icon sm{% if a.icone and a.icone != "" %} img-ok{% endif %} tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<picture>{% if a.icone_nuit and a.icone_nuit != "" %}<source srcset="{{ a.icone_nuit | relative_url }}" media="(prefers-color-scheme: dark)">{% endif %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}" loading="lazy"></picture>{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>
         {% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}
         <h3>{{ a.nom | escape }}</h3>
         <p>{{ a.accroche | escape }}</p>
