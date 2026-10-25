@@ -1,6 +1,7 @@
 ---
-nom: Aura Pro
+nom: Aura
 ordre: 2
+published: true
 statut: dev
 icone: /assets/images/apps/Aura.png
 teinte: violet
