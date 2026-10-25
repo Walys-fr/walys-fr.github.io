@@ -514,3 +514,4 @@ a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:r
   .app-icon.img-ok img{filter:drop-shadow(0 14px 26px rgba(0,0,0,.45)) drop-shadow(0 2px 4px rgba(0,0,0,.25))}
   .app-icon.sm.img-ok img{filter:drop-shadow(0 6px 12px rgba(0,0,0,.40))}
 }
+.app-icon picture{display:contents}
