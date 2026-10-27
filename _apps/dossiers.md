@@ -70,11 +70,17 @@ fonctions:
     titre: iPhone, iPad et Mac
     texte: Une app native pour chaque appareil. Sur Mac, un dossier surveillé peut
       importer automatiquement vos nouveaux fichiers.
+captures:
+  - /assets/images/apps/4-recherche.png
+  - /assets/images/apps/1-accueil.png
+  - /assets/images/apps/3-echeances.png
+  - /assets/images/apps/2-document.png
+format_captures: iphone
 infos:
   - libelle: Plateformes
     valeur: iPhone · iPad · Mac
   - libelle: Prix
-    valeur: À venir
+    valeur: 0,99 € · achat unique
   - libelle: Compte
     valeur: Aucun requis
   - libelle: iCloud
