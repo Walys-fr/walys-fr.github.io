@@ -75,6 +75,8 @@ captures:
   - /assets/images/apps/1-accueil.png
   - /assets/images/apps/3-echeances.png
   - /assets/images/apps/2-document.png
+  - /assets/images/apps/5-prive.png
+  - /assets/images/apps/6-envoyer.png
 format_captures: iphone
 infos:
   - libelle: Plateformes
