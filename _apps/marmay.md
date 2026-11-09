@@ -5,7 +5,7 @@ published: true
 statut: en_ligne
 lien_site: https://marmay974.re
 avec_compte: true
-icone: /assets/images/apps/icon.png
+icone: /assets/images/apps/icon-1.png
 teinte: vert
 accroche: La seconde main pour les enfants, entre Réunionnais.
 slogan: "Vêtements, poussettes, jouets, puériculture : vendez et trouvez les
