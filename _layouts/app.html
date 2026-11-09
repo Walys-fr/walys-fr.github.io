@@ -22,12 +22,16 @@ layout: base
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="{{ '/' | relative_url }}">Accueil</a><span class="sep">/</span><a href="{{ '/apps/' | relative_url }}">Apps</a><span class="sep">/</span><span>{{ a.nom | escape }}</span></nav>
   {{ icone_app }}
   <div>
-    {% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}
+    {% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "en_ligne" %}<span class="badge dispo"><span class="pulse"></span>En ligne</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}
     <h1>{{ a.nom | escape }}</h1>
     <p class="tagline">{{ a.slogan | default: a.accroche | escape }}</p>
     <div class="buttons left">
+      {%- if a.lien_site and a.lien_site != "" %}
+      <a class="button" href="{{ a.lien_site }}" rel="noopener">Ouvrir {{ a.nom | escape }} <span aria-hidden="true">↗</span></a>
+      {%- endif %}
       {%- if a.lien_app_store and a.lien_app_store != "" %}
       <a class="store-btn" href="{{ a.lien_app_store }}" rel="noopener"><span><small>Télécharger sur</small> l'App Store</span></a>
+      {%- elsif a.statut == "en_ligne" %}
       {%- elsif a.statut == "dev" %}
       <span class="store-btn disabled"><span><small>En développement</small> Disponible prochainement</span></span>
       {%- else %}
@@ -90,7 +94,7 @@ layout: base
       <div class="section-label">Vie privée</div>
       <h2 style="font-size:clamp(30px,4.4vw,46px)">{{ a.vie_privee.titre | escape }}</h2>
       <p class="lead">{{ a.vie_privee.texte | escape }}</p>
-      <div class="privacy-foot"><p><strong>Données collectées par Walys :</strong> aucune.</p><a class="button" href="#confidentialite" data-tab-link>Confidentialité de {{ a.nom | escape }}</a></div>
+      <div class="privacy-foot">{% if a.avec_compte %}<p><strong>Données utilisées :</strong> uniquement celles nécessaires au service. Jamais revendues, ni pub, ni suivi.</p>{% else %}<p><strong>Données collectées par Walys :</strong> aucune.</p>{% endif %}<a class="button" href="#confidentialite" data-tab-link>Confidentialité de {{ a.nom | escape }}</a></div>
     </div>
   </section>
 </div>
@@ -114,9 +118,14 @@ layout: base
         <h3>Contacter le support</h3>
         <p>Pour une aide rapide, indiquez dans votre message :</p>
         <ul>
+          {%- if a.statut == "en_ligne" %}
+          <li>votre appareil et votre navigateur (Safari, Chrome…) ;</li>
+          <li>la page concernée ;</li>
+          {%- else %}
           <li>le modèle de votre appareil{% if a.support.appareil != "" %} ({{ a.support.appareil | escape }}){% endif %} ;</li>
           <li>la version du système{% if a.support.systeme != "" %} ({{ a.support.systeme | escape }}){% endif %} ;</li>
           <li>la version de l'app (dans ses Réglages) ;</li>
+          {%- endif %}
           <li>ce qui se passe, et ce que vous attendiez.</li>
         </ul>
         <a class="button" style="margin-top:22px;width:100%" href="mailto:{{ r.email }}?subject={{ sujet_support | uri_escape }}">{{ svg }}{{ ic.mail }}</svg><span>Écrire au support</span></a>
@@ -124,7 +133,7 @@ layout: base
         {%- capture msg %}Bonjour, j'ai une question sur l'app {{ a.nom }}.{% endcapture %}
         <a class="button secondary" style="margin-top:10px;width:100%" href="{% if wl != "" %}{{ wl }}{% else %}https://wa.me/{{ wa }}?text={{ msg | url_encode | replace: '+', '%20' }}{% endif %}" rel="noopener">{{ svg }}{{ ic.whatsapp }}</svg><span>Support par WhatsApp</span></a>
         {%- endif %}
-        <div class="note"><b>Ne m'envoyez jamais</b> vos données personnelles ni vos fichiers de sauvegarde : je n'en ai pas besoin pour vous aider.</div>
+        {% if a.avec_compte %}<div class="note"><b>Ne m'envoyez jamais</b> votre mot de passe : je ne vous le demanderai jamais.</div>{% else %}<div class="note"><b>Ne m'envoyez jamais</b> vos données personnelles ni vos fichiers de sauvegarde : je n'en ai pas besoin pour vous aider.</div>{% endif %}
       </aside>
     </div>
   </section>
@@ -147,6 +156,19 @@ layout: base
     <h2>{{ sec.titre | escape }}</h2>
     {{ sec.texte | replace: "[email]", r.email | markdownify }}
     {%- endfor %}
+    {%- elsif a.avec_compte %}
+    {%- assign lien_conf = a.lien_confidentialite | default: a.lien_site %}
+    <div class="summary">
+      <b>En résumé :</b> {{ a.nom | escape }} fonctionne avec un compte en ligne. Seules les données nécessaires au service sont conservées.
+      <ul>
+        <li>Aucune publicité, aucun outil de statistiques, aucun traceur.</li>
+        <li>Vos données ne sont jamais vendues ni partagées à des fins commerciales.</li>
+        <li>Vous pouvez supprimer votre compte et vos données à tout moment.</li>
+      </ul>
+    </div>
+    <p>La politique de confidentialité complète de {{ a.nom | escape }} (données conservées, durée, hébergement, vos droits) est publiée sur son site.</p>
+    {%- if lien_conf and lien_conf != "" %}<p><a class="button" href="{{ lien_conf }}" rel="noopener">Lire la politique de {{ a.nom | escape }} ↗</a></p>{% endif %}
+    <p>Pour toute question : <a href="mailto:{{ r.email }}">{{ r.email }}</a>. Vous pouvez également saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
     {%- else %}
     <div class="summary">
       <b>En résumé :</b> {{ a.nom | escape }} ne collecte aucune donnée personnelle.
