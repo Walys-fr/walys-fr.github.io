@@ -6,7 +6,7 @@ statut: en_ligne
 lien_site: https://marmay974.re
 avec_compte: true
 icone: /assets/images/apps/icon.png
-teinte: violet
+teinte: vert
 accroche: La seconde main pour les enfants, entre Réunionnais.
 slogan: "Vêtements, poussettes, jouets, puériculture : vendez et trouvez les
   affaires des enfants près de chez vous, à La Réunion. Remise en main propre,
