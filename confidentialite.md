@@ -27,6 +27,8 @@ Ce que vous saisissez dans une app Walys est enregistré localement sur votre ap
 
 Pour les apps achetées sur l'App Store, les paiements sont gérés par Apple. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires. Apple fournit seulement aux développeurs des statistiques agrégées et anonymes (nombre de téléchargements, ventes par pays) qui ne permettent pas de vous identifier.
 
+C'est aussi le cas des **achats intégrés et des abonnements** proposés dans les apps : ils passent par Apple. Pour savoir si un achat ou un abonnement est actif, l'app interroge l'App Store directement depuis votre appareil ; aucune information n'est envoyée à Walys.
+
 Pour les abonnements vendus directement par Walys (par exemple l'abonnement professionnel de Marmay), le paiement est traité par **Stripe**. Walys ne voit jamais votre numéro de carte. Walys reçoit seulement ce qui est nécessaire à la facturation (nom ou raison sociale, e-mail, adresse de facturation) et le conserve le temps imposé par les obligations comptables (10 ans). Stripe traite ces paiements selon sa propre [politique de confidentialité](https://stripe.com/fr/privacy). Voir aussi les [conditions générales de vente](/cgv.html).
 
 ## 5. Ce site web
