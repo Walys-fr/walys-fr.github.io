@@ -515,3 +515,10 @@ a.pill:hover{transform:translateY(-1px);background:var(--surface);border-color:r
   .app-icon.sm.img-ok img{filter:drop-shadow(0 6px 12px rgba(0,0,0,.40))}
 }
 .app-icon picture{display:contents}
+/* Initiales de secours (app sans icône) proportionnées à la taille de l'icône */
+.app-icon .fallback{font-size:clamp(28px,8vw,52px)}
+.app-icon.sm .fallback{font-size:30px}
+.app-icon.xl .fallback{font-size:clamp(44px,9vw,80px)}
+/* Bouton placé dans un texte légal : garder ses couleurs de bouton */
+.legal a.button{color:#fff;text-decoration:none}
+@media (prefers-color-scheme:dark){.legal a.button{color:#0F1726}}
