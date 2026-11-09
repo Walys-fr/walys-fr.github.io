@@ -97,7 +97,7 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
       <article class="card app-card reveal">
         <div class="app-icon{% if a.icone and a.icone != "" %} img-ok{% endif %} tint-{{ a.teinte | default: 'bleu' }}" data-initiales="{{ a.nom | slice: 0, 2 | escape }}">{% if a.icone and a.icone != "" %}<picture>{% if a.icone_nuit and a.icone_nuit != "" %}<source srcset="{{ a.icone_nuit | relative_url }}" media="(prefers-color-scheme: dark)">{% endif %}<img src="{{ a.icone | relative_url }}" alt="Icône {{ a.nom | escape }}" loading="lazy"></picture>{% else %}<div class="fallback">{{ a.nom | slice: 0, 2 | escape }}</div>{% endif %}</div>
         <div>
-          <div class="app-head"><h3>{{ a.nom | escape }}</h3>{% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}</div>
+          <div class="app-head"><h3>{{ a.nom | escape }}</h3>{% case a.statut %}{% when "dispo" %}<span class="badge dispo"><span class="pulse"></span>Disponible</span>{% when "en_ligne" %}<span class="badge dispo"><span class="pulse"></span>En ligne</span>{% when "bientot" %}<span class="badge bientot"><span class="pulse"></span>Bientôt sur l'App Store</span>{% else %}<span class="badge dev"><span class="pulse"></span>En développement</span>{% endcase %}</div>
           <p class="app-tagline">{{ a.accroche | escape }}</p>
           <p>{{ a.resume | escape }}</p>
           <ul class="checklist app-features">
@@ -106,11 +106,12 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
           <div class="meta-row">
             {% if a.plateformes and a.plateformes != "" %}<span class="meta">{{ a.plateformes | escape }}</span>{% endif %}
             {% if a.prix and a.prix != "" %}<span class="meta">{{ a.prix | escape }}</span>{% endif %}
-            <span class="meta">Aucune donnée collectée</span>
+            {% if a.avec_compte %}<span class="meta">Sans pub ni suivi</span>{% else %}<span class="meta">Aucune donnée collectée</span>{% endif %}
           </div>
           <div class="link-row">
             <a href="{{ a.url | relative_url }}" class="card-link">Découvrir {{ a.nom | escape }} <span>→</span></a>
             <a href="{{ a.url | relative_url }}#support" class="card-link">Support <span>→</span></a>
+            {% if a.lien_site and a.lien_site != "" %}<a href="{{ a.lien_site }}" class="card-link" rel="noopener">Ouvrir le site <span>↗</span></a>{% endif %}
           </div>
         </div>
       </article>
@@ -137,7 +138,7 @@ titre_onglet: Walys — Admin · RH · Numérique · Apps Apple
     </div>
   </div>
   <div class="section-header center reveal" style="margin-top:90px;margin-bottom:10px">
-    <h3 class="section-title small">Où vont vos données ?</h3>
+    <h3 class="section-title small">Où vont les données de vos apps ?</h3>
   </div>
   <div class="flow reveal">
     <div class="flow-node">{{ svg }}{{ ic.telephone }}</svg><b>Votre appareil</b><small>Les données y sont créées et stockées</small></div>

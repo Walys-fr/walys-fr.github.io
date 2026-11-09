@@ -2,11 +2,12 @@
 layout: legal
 afficher_apps: true
 titre: Politique de confidentialité
-mise_a_jour: 8 octobre 2026
-resume: Walys ne collecte aucune donnée personnelle, ni dans ses apps, ni sur ce
-  site. Les données de vos apps restent sur vos appareils (et dans votre propre
-  iCloud si vous l'utilisez). Aucune publicité, aucun outil de statistiques,
-  aucun traceur, aucun SDK tiers. Aucun compte à créer, aucun serveur Walys.
+mise_a_jour: 9 novembre 2026
+resume: "Les apps Walys ne collectent aucune donnée personnelle. Ce que vous y
+  saisissez reste sur vos appareils (et dans votre propre iCloud si vous
+  l'utilisez). Aucune publicité, aucun outil de statistiques, aucun traceur,
+  aucun SDK tiers. Seules exceptions, expliquées ci-dessous : Marmay, service en
+  ligne avec compte, et la facturation des abonnements vendus en direct."
 ---
 ## 1. Responsable
 
@@ -16,13 +17,17 @@ Les applications et le site Walys sont édités par Wylfried Salcedo, entreprene
 
 **Aucune.** Les applications Walys ne transmettent aucune information à Walys ni à un tiers : pas de serveur, pas d'identifiant publicitaire, pas de mesure d'audience.
 
+Exceptions : **Marmay**, service en ligne, conserve les données nécessaires à son fonctionnement (compte, annonces, messages), décrites dans sa propre politique de confidentialité ; et les abonnements vendus directement par Walys nécessitent des informations de facturation (voir section 4).
+
 ## 3. Stockage
 
 Ce que vous saisissez dans une app Walys est enregistré localement sur votre appareil. Lorsque vous enregistrez une sauvegarde dans iCloud Drive, elle est conservée dans votre propre compte iCloud, géré par Apple. Walys n'y a aucun accès.
 
 ## 4. Achats et abonnements
 
-Les paiements sont gérés par Apple via l'App Store. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires. Apple fournit seulement aux développeurs des statistiques agrégées et anonymes (nombre de téléchargements, ventes par pays) qui ne permettent pas de vous identifier.
+Pour les apps achetées sur l'App Store, les paiements sont gérés par Apple. Walys ne reçoit ni votre nom, ni votre e-mail, ni vos coordonnées bancaires. Apple fournit seulement aux développeurs des statistiques agrégées et anonymes (nombre de téléchargements, ventes par pays) qui ne permettent pas de vous identifier.
+
+Pour les abonnements vendus directement par Walys (par exemple l'abonnement professionnel de Marmay), le paiement est traité par **Stripe**. Walys ne voit jamais votre numéro de carte. Walys reçoit seulement ce qui est nécessaire à la facturation (nom ou raison sociale, e-mail, adresse de facturation) et le conserve le temps imposé par les obligations comptables (10 ans). Stripe traite ces paiements selon sa propre [politique de confidentialité](https://stripe.com/fr/privacy). Voir aussi les [conditions générales de vente](/cgv.html).
 
 ## 5. Ce site web
 
