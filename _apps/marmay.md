@@ -3,7 +3,7 @@ nom: Marmay
 ordre: 5
 published: true
 statut: en_ligne
-lien_site: https://marmay974.re
+lien_site: https://marmay.pages.dev
 avec_compte: true
 icone: /assets/images/apps/icon-1.png
 teinte: vert
