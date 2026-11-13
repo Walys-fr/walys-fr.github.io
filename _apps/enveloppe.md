@@ -14,8 +14,9 @@ resume: "Un porte-monnaie et des enveloppes virtuelles pour suivre vos espèces
   au quotidien : courses, épargne, budgets familiaux. Simple, rapide et
   totalement hors ligne."
 plateformes: iPhone
-prix: Achat unique
+prix: Gratuit · formules Lite et Premium
 points:
+  - Gratuit, sans pub ni suivi
   - Porte-monnaie et enveloppes
   - Détail des billets et pièces
   - Calcul de la monnaie rendue
@@ -61,19 +62,59 @@ infos:
   - libelle: Plateforme
     valeur: iPhone
   - libelle: Prix
-    valeur: 4,99 € · achat unique
+    valeur: Gratuit · Lite et Premium en option
+  - libelle: Essai
+    valeur: 1 mois offert sur les abonnements
   - libelle: Langues
     valeur: 7 langues
   - libelle: Connexion
-    valeur: Aucune requise
+    valeur: Aucune pour utiliser l'app
 vie_privee:
   titre: Votre argent ne regarde que vous.
-  texte: Enveloppe fonctionne sans internet, sans compte et sans aucune
-    autorisation particulière. Vos montants restent sur votre iPhone.
+  texte: "Enveloppe fonctionne sans internet, sans compte et sans aucune
+    autorisation particulière. Vos montants restent sur votre iPhone. Les
+    formules sont payées via votre compte Apple : je ne reçois aucune
+    information sur vous."
 support:
   appareil: ex. iPhone 15
   systeme: Réglages › Général › Informations
 faq:
+  - question: Enveloppe est-elle gratuite ?
+    reponse: >-
+      Oui. **Enveloppe Basic** est gratuite : porte-monnaie, paiement
+      automatique, historique et style Simplifié.
+
+
+      Pour aller plus loin, deux formules au choix :
+
+
+      - **Enveloppe Lite** : 1 enveloppe, les styles Liquid effect et Réaliste,
+      le widget et la sauvegarde ;
+
+      - **Enveloppe Premium** : la même chose, avec des enveloppes illimitées.
+
+
+      Lite et Premium existent au mois ou à l'année, avec **1 mois d'essai
+      gratuit** pour les nouveaux abonnés. Premium existe aussi **à vie**, en un
+      seul achat. Les prix sont affichés dans l'app, dans votre monnaie.
+  - question: "J'avais acheté l'app avant : dois-je payer à nouveau ?"
+    reponse: "Non. Si vous avez acheté Enveloppe quand elle était payante (ou reçu
+      un code de téléchargement), vous gardez l'accès complet pour toujours,
+      sans rien payer. Il s'affiche dans Réglages › Ma formule. Si besoin,
+      touchez « Restaurer les achats »."
+  - question: Comment résilier mon abonnement ?
+    reponse: "L'abonnement est géré par Apple. Sur l'iPhone : Réglages › votre nom ›
+      Abonnements › Enveloppe, ou dans l'app : Réglages › Ma formule › Gérer mon
+      abonnement. Résiliez au moins 24 h avant la fin de la période pour éviter
+      le renouvellement : vous gardez l'accès jusqu'à la fin de la période
+      payée."
+  - question: Que deviennent mes enveloppes si j'arrête mon abonnement ?
+    reponse: Rien n'est supprimé. Vos enveloppes restent dans l'app, simplement
+      verrouillées (avec un cadenas) jusqu'à ce que vous repreniez une formule.
+      Le porte-monnaie et l'historique restent utilisables gratuitement.
+  - question: Comment obtenir un remboursement ?
+    reponse: Les paiements passant par Apple, les demandes de remboursement se font
+      directement auprès d'Apple sur reportaproblem.apple.com.
   - question: Comment sauvegarder mes données ?
     reponse: "Dans les Réglages de l'app, choisissez la sauvegarde : un fichier est
       créé, que vous enregistrez dans l'app Fichiers (sur l'iPhone ou dans
@@ -93,8 +134,9 @@ faq:
       1. Sur l'ancien iPhone, faites une sauvegarde et enregistrez-la dans
       iCloud Drive.
 
-      2. Sur le nouvel iPhone, retéléchargez Enveloppe depuis l'App Store (sans
-      repayer, avec le même identifiant Apple).
+      2. Sur le nouvel iPhone, retéléchargez Enveloppe depuis l'App Store, avec
+      le même identifiant Apple. Votre formule est reconnue automatiquement
+      (sinon : Réglages › Ma formule › Restaurer les achats).
 
       3. Restaurez la sauvegarde depuis les Réglages de l'app.
   - question: Comment exporter mes mouvements ?
@@ -104,13 +146,15 @@ faq:
     reponse: Restez appuyé sur l'écran d'accueil, touchez « Modifier » puis «
       Ajouter un widget », et cherchez Enveloppe.
   - question: L'app a-t-elle besoin d'internet ?
-    reponse: Non. Enveloppe fonctionne entièrement hors ligne et n'envoie aucune donnée.
+    reponse: Non. Enveloppe fonctionne entièrement hors ligne et n'envoie aucune
+      donnée. Internet sert seulement à souscrire ou restaurer une formule (via
+      l'App Store) et à afficher la version en ligne de l'aide.
   - question: "J'ai supprimé l'app : mes données sont-elles perdues ?"
     reponse: "Les données sont stockées dans l'app : la supprimer les efface. Seule
       une sauvegarde que vous avez enregistrée dans Fichiers permet de les
       retrouver."
 confidentialite:
-  mise_a_jour: 7 octobre 2026
+  mise_a_jour: 13 novembre 2026
   politique:
     - titre: En une phrase
       texte: Enveloppe ne collecte, ne transmet et ne partage aucune donnée. Tout ce
@@ -147,7 +191,9 @@ confidentialite:
 
         - ne se connecte à aucune base de données en ligne
 
-        - ne nécessite aucune connexion Internet pour fonctionner
+        - ne nécessite aucune connexion Internet pour fonctionner (Internet
+        sert seulement aux achats via l'App Store et à l'affichage de l'aide en
+        ligne)
 
         - ne crée aucun compte utilisateur
 
@@ -170,16 +216,31 @@ confidentialite:
         - n'intègre aucun outil d'analyse ou de mesure d'audience (analytics)
         - n'intègre aucun SDK tiers de suivi publicitaire
         - ne vend, ne loue et ne partage aucune information avec qui que ce soit
+    - titre: Achats et abonnements
+      texte: >-
+        Enveloppe est gratuite et propose des formules payantes (Enveloppe Lite
+        et Enveloppe Premium, en abonnement ou à vie). Ces achats sont
+        entièrement gérés par **Apple**, qui est le vendeur : paiement,
+        facturation, renouvellement, résiliation et remboursements.
+
+
+        Je ne reçois ni votre nom, ni votre e-mail, ni vos coordonnées
+        bancaires. Pour savoir si une formule est active, l'app interroge
+        l'App Store directement depuis votre iPhone, à l'aide du framework
+        StoreKit d'Apple ; aucune information n'est envoyée à Walys ni à un
+        autre serveur.
     - titre: Autorisations demandées par l'application
       texte: "Enveloppe ne demande accès à aucune fonctionnalité sensible de votre
         iPhone : ni appareil photo, ni microphone, ni contacts, ni localisation,
         ni photos. L'application n'a besoin d'aucune permission particulière
         pour fonctionner."
     - titre: Bibliothèques et services tiers
-      texte: Enveloppe n'intègre aucune bibliothèque logicielle tierce, aucun kit de
+      texte: "Enveloppe n'intègre aucune bibliothèque logicielle tierce, aucun kit de
         développement (SDK) externe, ni aucun service tiers d'aucune sorte.
-        Seuls les frameworks natifs d'Apple (SwiftUI, SwiftData) sont utilisés,
-        lesquels ne transmettent aucune donnée hors de votre appareil.
+        Seuls les frameworks natifs d'Apple sont utilisés : SwiftUI et
+        SwiftData, qui ne transmettent aucune donnée hors de votre appareil, et
+        StoreKit, qui sert uniquement à vérifier et à effectuer les achats
+        auprès de l'App Store."
     - titre: Export et suppression de vos données
       texte: >-
         Vous pouvez à tout moment :
@@ -220,7 +281,7 @@ confidentialite:
     décidez (app Fichiers, iCloud Drive…).
   autorisations:
     - element: Internet
-      usage: Non utilisé
+      usage: Uniquement pour les achats via l'App Store et l'aide en ligne
     - element: Localisation, contacts, photos, micro
       usage: Non demandés
     - element: Widget
